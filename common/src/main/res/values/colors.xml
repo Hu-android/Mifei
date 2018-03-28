@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E6FFFFFF</color>
+    <color name="colorPrimaryDark">#ED465C</color>
+    <color name="colorAccent">#ED465C</color>
+
+    <color name="color_EF6FB0">#EF6FB0</color>
+    <color name="color_ED465C">#ED465C</color>
+
+    <color name="btn_color_blue">#63C9CF</color>
+    <color name="hint_text_color">#FFCCCCCC</color>
+    <color name="toast_title_color">#FF333333</color>
+    <color name="toast_white">#ffffff</color>
+    <color name="toast_stroke_gray">#99d4d4d4</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="gray_light">#c4c3c9</color>
+    <color name="transparent">#0000</color>
+    <color name="tv_talk_content">#FFB3B3B3</color>
+    <color name="blue_check">#3493d4</color>
+    <color name="spilt_line">#CFCFCF</color>
+    <color name="color_wx">#00AC0A</color>
+    <color name="color_zfb">#49ABF5</color>
+
+
+    <color name="color_212121">#212121</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_ff227a">#ff227a</color>
+    <color name="color_DCDCDC">#DCDCDC</color>
+    <color name="color_6b2073">#6b2073</color>
+    <color name="color_ff8a44">#ff8a44</color>
+    <color name="color_E147A5">#E147A5</color>
+    <color name="color_FFEFDB">#FFEFDB</color>
+    <color name="color_74A5F6">#74A5F6</color>
+    <color name="color_F94882">#F94882</color>
+    <color name="color_EEB336">#EEB336</color>
+    <color name="color_EAEAEA">#EAEAEA</color>
+    <color name="color_F8E81C">#F8E81C</color>
+    <color name="color_3584E0">#3584E0</color>
+    <color name="color_444A59">#444A59</color>
+    <color name="color_9B9B9B">#9B9B9B</color>
+    <color name="color_5AC8FA">#5AC8FA</color>
+    <color name="ic_default_bg_color">#33000000</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="color_56AFF3">#56AFF3</color>
+    <color name="color_7FB2ED">#7FB2ED</color>
+    <color name="color_CD8B1E">#CD8B1E</color>
+    <color name="color_EBEBEB">#EBEBEB</color>
+
+</resources>

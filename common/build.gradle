@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+//        multiDexEnabled true
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    //        exclude group: 'com.android.support', module: 'support-annotations'
+    //    })
+    //    testCompile 'junit:junit:4.12'
+    compile('com.android.support:appcompat-v7:25.0.1') {
+        exclude group: 'com.android.support'
+    }
+    //    compile('com.android.support:design:25.0.1') {
+    //        exclude group: 'com.android.support'
+    //    }
+
+    compile('com.android.support:cardview-v7:25.0.1') {
+        exclude group: 'com.android.support'
+    }
+
+    compile('com.android.support:recyclerview-v7:25.0.1') {
+        exclude group: 'com.android.support'
+    }
+    //TabLayout
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:+'
+    //黄油刀
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //图片加载库
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    // photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    //easyRecycleview
+    compile 'com.jude:easyrecyclerview:+'
+    //图片选择器
+    compile 'com.github.YancyYe:GalleryPick:1.2.1'
+    //第三方登录分享
+    compile project(':libraryshare')
+    //gson
+    compile 'com.google.code.gson:gson:2.7'
+    //网络请求库
+    //okhttp的二次封装
+    compile 'com.lzy.net:okgo:3.0.4'
+    //eventbus
+    compile 'de.greenrobot:eventbus:2.4.0'
+    //Android 6.0运行时权限管理
+    compile 'com.yanzhenjie:permission:1.0.5'
+    //    智能下拉刷新框架
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.2'
+    //recelviews item动画
+    compile project(':recanimators')
+
+}

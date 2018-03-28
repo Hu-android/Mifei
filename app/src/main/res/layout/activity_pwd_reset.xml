@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pwd__reset"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.mifei.activity.Pwd_Reset">
+
+    <include
+        layout="@layout/title_back_view">
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/Android_20dp"
+        android:paddingRight="@dimen/Android_20dp"
+        android:paddingTop="@dimen/Android_20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_tel_reset"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page1mobile"
+                android:id="@+id/img_icon_mobile_reset"
+                android:layout_margin="@dimen/Android_14dp" />
+            <EditText
+                style="@style/Edittext_theme"
+                android:layout_alignTop="@id/img_icon_mobile_reset"
+                android:hint="请输入联系电话"
+                android:layout_toRightOf="@id/img_icon_mobile_reset"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="@dimen/px_639"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Android_15dp"
+            android:id="@+id/Rela_yzm_reset"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page1yzm"
+                android:layout_margin="@dimen/Android_14dp"
+                android:id="@+id/img_icon_yzm_reset"/>
+            <EditText
+                style="@style/Edittext_theme"
+                android:id="@+id/et_yzm_reset"
+                android:layout_alignTop="@id/img_icon_yzm_reset"
+                android:layout_toRightOf="@id/img_icon_yzm_reset"
+                android:hint="请输入验证码"
+                />
+        </RelativeLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_shape"
+                android:layout_toRightOf="@id/Rela_yzm_reset"
+                android:text="获取验证码"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/Android_7dp"
+                android:layout_alignTop="@id/Rela_yzm_reset"
+                android:layout_alignBottom="@id/Rela_yzm_reset"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Android_15dp"
+            android:id="@+id/Rela_pwd_reset"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page1pwd"
+                android:layout_margin="@dimen/Android_14dp"
+                android:id="@+id/img_icon_pwd_reset"/>
+            <EditText
+                style="@style/Edittext_theme"
+                android:id="@+id/et_pwd_reset"
+                android:layout_alignTop="@id/img_icon_pwd_reset"
+                android:layout_toRightOf="@id/img_icon_pwd_reset"
+                android:hint="请输入登录密码"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Android_15dp"
+            android:id="@+id/Rela_pwd_reset2"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page1pwd"
+                android:layout_margin="@dimen/Android_14dp"
+                android:id="@+id/img_icon_pwd_reset2"/>
+            <EditText
+                style="@style/Edittext_theme"
+                android:id="@+id/et_pwd_reset2"
+                android:layout_alignTop="@id/img_icon_pwd_reset2"
+                android:layout_toRightOf="@id/img_icon_pwd_reset2"
+                android:hint="请再次输入登录密码"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="确认"
+            android:layout_marginTop="@dimen/Android_50dp"
+            android:id="@+id/btn_pwd_reset"/>
+    </LinearLayout>
+
+</LinearLayout>

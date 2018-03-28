@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mifei</string>
+    <string name="login_title">会员登录-米菲</string>
+
+    <!--tab栏名字-->
+    <string name="tv_yuncang">云仓</string>
+    <string name="tv_zhigou">直购</string>
+    <string name="tv_mess">消息</string>
+    <string name="tv_mine">我的</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
