@@ -32,6 +32,7 @@ public class GoodsPickAdapter extends BaseAdapter {
     private int mItemCount;
     private ShopCart shopCart;
     private ShoppingCart shoppingCart;
+    private int count = 0;
 
     public GoodsPickAdapter(Context context) {
         this.mContext = context;
@@ -74,7 +75,7 @@ public class GoodsPickAdapter extends BaseAdapter {
         viewHolder.txtTop.setText(pick.goodsName);
         viewHolder.txtMid.setText(pick.pickPrice+"");
         viewHolder.txtMid2.setText(pick.pickPriceHigher+"");
-        int count = 0;
+
         if (count == 0){
             viewHolder.imgSub.setVisibility(View.GONE);
             viewHolder.txtNum.setVisibility(View.GONE);
@@ -87,7 +88,10 @@ public class GoodsPickAdapter extends BaseAdapter {
         viewHolder.imgSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                if (count > 0 ){
+                    count--;
+
+                }
             }
         });
         return convertView;
