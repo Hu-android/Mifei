@@ -37,13 +37,36 @@ public class GoodsInfoModel extends BaseHttpModel{
 
     public static class goodsInfo_Pick extends BaseHttpModel{
         public String goodsName;
-        public int pickPriceHigher;
-        public int pickPrice;
+        public double pickPriceHigher;
+        public double pickPrice;
+        public int remain;
 
-        public goodsInfo_Pick(String goodsName, int pickPrice, int pickPriceHigher) {
+        public goodsInfo_Pick(String goodsName, double pickPriceHigher, double pickPrice, int remain) {
             this.goodsName = goodsName;
-            this.pickPrice = pickPrice;
             this.pickPriceHigher = pickPriceHigher;
+            this.pickPrice = pickPrice;
+            this.remain = remain;
+        }
+
+        public void setRemain(int remain) {
+            this.remain = remain;
+        }
+
+        public String getGoodsName() {
+
+            return goodsName;
+        }
+
+        public double getPickPriceHigher() {
+            return pickPriceHigher;
+        }
+
+        public double getPickPrice() {
+            return pickPrice;
+        }
+
+        public int getRemain() {
+            return remain;
         }
     }
 

@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.common.commonutil.CollectionUtils;
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.bean.GoodsInfoModel;
+import com.example.administrator.mifei.bean.ShopCart;
+import com.example.administrator.mifei.bean.ShoppingCart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,10 @@ public class GoodsPickAdapter extends BaseAdapter {
 
     private Context mContext;
     private LayoutInflater mInflater;
-    List<GoodsInfoModel.goodsInfo_Pick> mList = new ArrayList<>();
+    private ArrayList<GoodsInfoModel.goodsInfo_Pick> mList;
+    private int mItemCount;
+    private ShopCart shopCart;
+    private ShoppingCart shoppingCart;
 
     public GoodsPickAdapter(Context context) {
         this.mContext = context;
@@ -67,16 +72,24 @@ public class GoodsPickAdapter extends BaseAdapter {
         }
         GoodsInfoModel.goodsInfo_Pick pick = mList.get(position);
         viewHolder.txtTop.setText(pick.goodsName);
-        viewHolder.txtMid.setText(String.valueOf(pick.pickPrice));
-        viewHolder.txtMid2.setText(String.valueOf(pick.pickPriceHigher));
-        int a = Integer.parseInt(String.valueOf(viewHolder.txtNum.getText()));
-        if (a == 0){
-            viewHolder.imgSub.setVisibility(View.INVISIBLE);
+        viewHolder.txtMid.setText(pick.pickPrice+"");
+        viewHolder.txtMid2.setText(pick.pickPriceHigher+"");
+        int count = 0;
+        if (count == 0){
+            viewHolder.imgSub.setVisibility(View.GONE);
             viewHolder.txtNum.setVisibility(View.GONE);
         }else {
             viewHolder.imgSub.setVisibility(View.VISIBLE);
             viewHolder.txtNum.setVisibility(View.VISIBLE);
+            viewHolder.txtNum.setText(count + "");
         }
+
+        viewHolder.imgSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
         return convertView;
     }
 
@@ -85,29 +98,11 @@ public class GoodsPickAdapter extends BaseAdapter {
         return false;
     }
 
-    //减按钮
-    public interface onItemSubListener{
-        void onSubClick(int i);
-    }
-    private onItemSubListener mOnItemSubListener;
-    public void setmOnItemSubListener(onItemSubListener mOnItemSubListener){
-        this.mOnItemSubListener = mOnItemSubListener;
-    }
-
-    //加按钮
-    public interface onItemPlusListener{
-        void onPlusClick(int i);
-    }
-    private onItemPlusListener mOnItemPlusListener;
-    public void setmOnItemPlusListener(onItemPlusListener mOnItemPlusListener){
-        this.mOnItemPlusListener = mOnItemPlusListener;
-    }
-
     static class ViewHolder {
 
         TextView txtTop, txtMid, txtBottom, txtNum, txtMid2, txtNumX;
         ImageView imgGoods, imgPlus, imgSub;
-        int a = 0;
+
         public ViewHolder(View view) {
             txtNumX = (TextView) view.findViewById(R.id.txtNumX);
             txtTop = (TextView) view.findViewById(R.id.txtTop);
@@ -122,7 +117,6 @@ public class GoodsPickAdapter extends BaseAdapter {
             txtNumX.setVisibility(View.GONE);
             txtMid.setTextColor(Color.parseColor("#FFE63549"));
             txtMid.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
-            txtNum.setText("0");
         }
     }
 }

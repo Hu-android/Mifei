@@ -8,6 +8,9 @@
     <string name="tv_mess">消息</string>
     <string name="tv_mine">我的</string>
 
+    <!--各种带数据的TextView-->
+    <string name="txt_totalMoney">合计：%s</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

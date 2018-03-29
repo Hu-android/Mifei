@@ -13,7 +13,14 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listViewPick">
+        android:layout_height="0dp"
+        android:id="@+id/listViewPick"
+        android:layout_weight="1">
     </ListView>
+
+    <include
+        layout="@layout/total_money"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </include>
 </LinearLayout>

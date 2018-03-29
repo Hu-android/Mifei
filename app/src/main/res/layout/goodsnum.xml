@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/floatsub"
         android:layout_alignParentLeft="true"
+        android:clickable="true"
         android:id="@+id/btnSub"/>
     <TextView
         android:id="@+id/txtNum"
@@ -18,11 +19,12 @@
         android:textSize="15sp"
         android:textColor="#FF030303"
         android:layout_centerInParent="true"
-        android:text="10"/>
+        android:text="0"/>
     <ImageView
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:src="@drawable/floatplus"
         android:id="@+id/btnPlus"/>
 </RelativeLayout>

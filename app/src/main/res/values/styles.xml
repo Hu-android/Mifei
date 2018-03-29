@@ -19,4 +19,15 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Text_Text_theme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#FF333333</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/Android_15dp</item>
+        <item name="android:paddingRight">@dimen/Android_15dp</item>
+        <item name="android:paddingTop">@dimen/Android_12dp</item>
+        <item name="android:paddingBottom">@dimen/Android_12dp</item>
+    </style>
+
 </resources>
