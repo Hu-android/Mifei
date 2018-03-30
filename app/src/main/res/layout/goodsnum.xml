@@ -3,11 +3,12 @@
     android:orientation="horizontal" android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/floatsub"
         android:layout_alignParentLeft="true"
+        android:background="@color/colorPrimary"
         android:clickable="true"
         android:id="@+id/btnSub"/>
     <TextView
@@ -20,11 +21,12 @@
         android:textColor="#FF030303"
         android:layout_centerInParent="true"
         android:text="0"/>
-    <ImageView
+    <ImageButton
         android:layout_alignParentRight="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:background="@color/colorPrimary"
         android:src="@drawable/floatplus"
         android:id="@+id/btnPlus"/>
 </RelativeLayout>

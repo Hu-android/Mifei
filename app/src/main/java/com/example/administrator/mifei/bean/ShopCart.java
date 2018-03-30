@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2018/3/29 0029.
+ * Created by Administrator on 2018/3/30 0030.
  */
 
 public class ShopCart {
@@ -28,46 +28,38 @@ public class ShopCart {
         return shoppingTotalPrice;
     }
 
-    public Map<GoodsInfoModel.goodsInfo_Pick, Integer> getShoppingSingle() {
+    public Map<GoodsInfoModel.goodsInfo_Pick, Integer> getShoppingSingleMap() {
         return shoppingSingle;
     }
 
-    public boolean addShoppingSingle(GoodsInfoModel.goodsInfo_Pick goodsInfo_pick){
-        int remain = goodsInfo_pick.getRemain();
-        if (remain<=0)
-            return false;
-        goodsInfo_pick.setRemain(--remain);
+    public boolean addShoppingSingle(GoodsInfoModel.goodsInfo_Pick dish){
         int num = 0;
-        if (shoppingSingle.containsKey(goodsInfo_pick)){
-            num = shoppingSingle.get(goodsInfo_pick);
+        if(shoppingSingle.containsKey(dish)){
+            num = shoppingSingle.get(dish);
         }
         num+=1;
-        shoppingSingle.put(goodsInfo_pick,num);
-        Log.e("TAG","addShoppingSingle:" + shoppingSingle.get(goodsInfo_pick));
+        shoppingSingle.put(dish,num);
+        Log.e("TAG", "addShoppingSingle: "+shoppingSingle.get(dish));
 
-        shoppingTotalPrice += goodsInfo_pick.getPickPrice();
+        shoppingTotalPrice += dish.getPickPrice();
         shoppingAccount++;
         return true;
     }
 
-    public boolean subShoppingSingle(GoodsInfoModel.goodsInfo_Pick goodsInfo_pick){
+    public boolean subShoppingSingle(GoodsInfoModel.goodsInfo_Pick goodsInfoPick){
         int num = 0;
-        if (shoppingSingle.containsKey(goodsInfo_pick)){
-            num = shoppingSingle.get(goodsInfo_pick);
+        if(shoppingSingle.containsKey(goodsInfoPick)){
+            num = shoppingSingle.get(goodsInfoPick);
         }
-        if (num<=0) return false;
-        num--;
-        int remin = goodsInfo_pick.getRemain();
-        goodsInfo_pick.setRemain(++remin);
-        shoppingSingle.put(goodsInfo_pick,num);
-        if (num ==0) shoppingSingle.remove(goodsInfo_pick);
+        shoppingSingle.put(goodsInfoPick,num);
+        if (num ==0) shoppingSingle.remove(goodsInfoPick);
 
-        shoppingTotalPrice -=goodsInfo_pick.getPickPrice();
+        shoppingTotalPrice -= goodsInfoPick.getPickPrice();
         shoppingAccount--;
         return true;
     }
 
-    public int getGoodsAccount(){
+    public int getDishAccount() {
         return shoppingSingle.size();
     }
 

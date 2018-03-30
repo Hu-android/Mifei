@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -148,8 +149,8 @@ public class GoodsAdapter extends BaseAdapter {
             txtMid2 = (TextView) view.findViewById(R.id.txtMid2);
             txtBottom = (TextView) view.findViewById(R.id.txtBottom);
             txtNum = (TextView) view.findViewById(R.id.txtNum);
-            imgPlus = (ImageView) view.findViewById(R.id.btnPlus);
-            imgSub = (ImageView) view.findViewById(R.id.btnSub);
+            imgPlus = (ImageButton) view.findViewById(R.id.btnPlus);
+            imgSub = (ImageButton) view.findViewById(R.id.btnSub);
             imgGoods = (ImageView) view.findViewById(R.id.img_yckc_list_item);
             txtMid2.setVisibility(View.GONE);
             txtNum.setVisibility(View.GONE);

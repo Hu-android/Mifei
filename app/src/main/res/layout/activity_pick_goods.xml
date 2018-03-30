@@ -19,6 +19,7 @@
     </ListView>
 
     <include
+        android:id="@+id/totalMoneyGroup"
         layout="@layout/total_money"
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
