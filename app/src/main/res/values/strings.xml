@@ -8,6 +8,10 @@
     <string name="tv_mess">消息</string>
     <string name="tv_mine">我的</string>
 
+    <!--BuyGoods tab栏名字-->
+    <string name="tv_zhengxiang">整箱装</string>
+    <string name="tv_danbao">单包装</string>
+
     <!--各种带数据的TextView-->
     <string name="txt_totalMoney">合计：%s</string>
 

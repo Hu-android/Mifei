@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,11 +25,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 public class PickGoods extends BaseBackActivity implements View.OnClickListener,AdapterView.OnItemClickListener{
 
     GoodsPickAdapter adapter;
     private List<GoodsInfoModel.goodsInfo_Pick> picks = new ArrayList<GoodsInfoModel.goodsInfo_Pick>();
+    @Bind(R.id.btnPay)
+    Button btnPay;
     @Bind(R.id.listViewPick)
     ListView listViewPick;
     private double totalMoney=0;
@@ -52,7 +56,12 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
 
     @Override
     public void initView(Bundle savedInstanceState) {
-        double totalMoney = goodsInfo_pick.getTotalPrice();
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext,totalMoney+"",Toast.LENGTH_SHORT).show();
+            }
+        });
         if (totalMoney == 0){
 
         }
@@ -72,7 +81,7 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
         picks.add(pick2);
         GoodsInfoModel.goodsInfo_Pick pick3 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",25,200);
         picks.add(pick3);
-        GoodsInfoModel.goodsInfo_Pick pick4 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",11.8,200);
+        GoodsInfoModel.goodsInfo_Pick pick4 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",11.5,200);
         picks.add(pick4);
         GoodsInfoModel.goodsInfo_Pick pick5 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",7,200);
         picks.add(pick5);
