@@ -95,12 +95,14 @@ public class GoodsPickAdapter extends BaseAdapter {
             holder.txtBottom = (TextView) v.findViewById(R.id.txtBottom);
             holder.txtNum = (TextView) v.findViewById(R.id.txtNum);
             holder.imgPlus = (ImageButton) v.findViewById(R.id.btnPlus);
-            holder.txtTotalMoney = (TextView) v.findViewById(R.id.txtTotalMoney);
-
             holder.imgSub = (ImageButton) v.findViewById(R.id.btnSub);
             holder.imgGoods = (ImageView) v.findViewById(R.id.img_yckc_list_item);
+            holder.txtTotalMoney = (TextView) v.findViewById(R.id.txtTotalMoney);
 
+            holder.imgPlus = (ImageButton) v.findViewById(R.id.btnPlus);
             holder.imgPlus.setOnClickListener(onAddNum);
+
+            holder.imgSub = (ImageButton) v.findViewById(R.id.btnSub);
             holder.imgSub.setOnClickListener(onSubNum);
         }
 
@@ -108,13 +110,15 @@ public class GoodsPickAdapter extends BaseAdapter {
         holder.txtNumX.setVisibility(View.GONE);
         holder.txtMid.setTextColor(Color.parseColor("#FFE63549"));
         holder.txtMid.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+        holder.imgGoods.setImageResource(cList.get(position).goodsImage);
         holder.txtTop.setText(cList.get(position).goodsName);
         holder.txtMid.setText(cList.get(position).pickPrice+"");
         holder.txtMid2.setText(cList.get(position).pickPriceHigher+"");
-        String price = "￥"+cList.get(position).getTotalPrice();
-        holder.txtTotalMoney.setText(price);
-        holder.txtTotalMoney.getPaint().setFlags(Paint.SUBPIXEL_TEXT_FLAG);
-        holder.txtNum.setText(cList.get(position).getGoodsNum());
+        //String price = "￥"+cList.get(position).getTotalPrice();
+        //holder.txtTotalMoney.setText(price);
+        //holder.txtTotalMoney.getPaint().setFlags(Paint.SUBPIXEL_TEXT_FLAG);
+        holder.txtNum.setText(cList.get(position).getGoodsNum()+"");
+        count = cList.get(position).goodsNum;
         if (count == 0){
             holder.txtNum.setVisibility(View.GONE);
             holder.imgSub.setVisibility(View.GONE);
@@ -122,7 +126,6 @@ public class GoodsPickAdapter extends BaseAdapter {
             holder.txtNum.setVisibility(View.VISIBLE);
             holder.imgSub.setVisibility(View.VISIBLE);
         }
-
 
         holder.imgPlus.setTag(position);
         holder.imgSub.setTag(position);
@@ -171,10 +174,12 @@ public class GoodsPickAdapter extends BaseAdapter {
         return convertView;
     }*/
 
-    @Override
+
+    //设置不可点击
+   /* @Override
     public boolean isEnabled(int position) {
         return false;
-    }
+    }*/
 
 
     private static class ViewHolder {

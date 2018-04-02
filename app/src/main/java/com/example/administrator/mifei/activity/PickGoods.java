@@ -27,42 +27,14 @@ import butterknife.Bind;
 
 public class PickGoods extends BaseBackActivity implements View.OnClickListener,AdapterView.OnItemClickListener{
 
-    private ShopCart shopCart;
     GoodsPickAdapter adapter;
     private List<GoodsInfoModel.goodsInfo_Pick> picks = new ArrayList<GoodsInfoModel.goodsInfo_Pick>();
     @Bind(R.id.listViewPick)
     ListView listViewPick;
-    private double totalMoney;
+    private double totalMoney=0;
     private TextView txtTotalMoney;
+    GoodsInfoModel.goodsInfo_Pick goodsInfo_pick;
 
-    private DataSetObserver sumObserver = new DataSetObserver() {
-        @Override
-        public void onChanged() {
-            super.onChanged();
-            totalMoney();
-            txtTotalMoney.setText(totalMoney+"");
-        }
-
-        @Override
-        public void onInvalidated() {
-            super.onInvalidated();
-            totalMoney();
-            txtTotalMoney.setText(totalMoney+"");
-        }
-    };
-
-
-    //计算总价
-    public double totalMoney(){
-        totalMoney = 0;
-        for (int i = 0;i<picks.size();i++){
-            int count = Double.valueOf(picks.get(i).getGoodsNum()).intValue();
-            int itemMoney = Double.valueOf(picks.get(i).getTotalPrice()).intValue();
-            int item = count * itemMoney;
-            totalMoney+=item;
-        }
-        return totalMoney;
-    }
     @Override
     public int getLayoutId() {
         return R.layout.activity_pick_goods;
@@ -80,28 +52,33 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
 
     @Override
     public void initView(Bundle savedInstanceState) {
+        double totalMoney = goodsInfo_pick.getTotalPrice();
+        if (totalMoney == 0){
+
+        }
         txtTotalMoney = (TextView)findViewById(R.id.txtTotalMoney);
         initListData();
     }
 
 
     public void initListData(){
+
         picks = new ArrayList<GoodsInfoModel.goodsInfo_Pick>();
         GoodsInfoModel.goodsInfo_Pick pick0 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
         picks.add(pick0);
         GoodsInfoModel.goodsInfo_Pick pick1 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
         picks.add(pick1);
-        GoodsInfoModel.goodsInfo_Pick pick2 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick2 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",50,200);
         picks.add(pick2);
-        GoodsInfoModel.goodsInfo_Pick pick3 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick3 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",25,200);
         picks.add(pick3);
-        GoodsInfoModel.goodsInfo_Pick pick4 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick4 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",11.8,200);
         picks.add(pick4);
-        GoodsInfoModel.goodsInfo_Pick pick5 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick5 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",7,200);
         picks.add(pick5);
         GoodsInfoModel.goodsInfo_Pick pick6 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
         picks.add(pick6);
-        GoodsInfoModel.goodsInfo_Pick pick7 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick7 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",546,200);
         picks.add(pick7);
         GoodsInfoModel.goodsInfo_Pick pick8 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
         picks.add(pick8);
@@ -110,7 +87,8 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
 
         adapter = new GoodsPickAdapter(mContext,picks);
         listViewPick.setAdapter(adapter);
-
+        adapter.setOnAddNum(this);
+        adapter.setOnSubNum(this);
 
     }
 
@@ -121,7 +99,7 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Toast.makeText(mContext,"点击了"+ position + "按钮",Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -131,19 +109,25 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
             case R.id.btnPlus:
                 if (tag != null && tag instanceof Integer) {
                     int position = (Integer) tag;
-                    int num = Double.valueOf(picks.get(position).getGoodsNum()).intValue();
+                    int num = picks.get(position).getGoodsNum();
                     num++;
                     picks.get(position).setGoodsNum(num);
+                    totalMoney += picks.get(position).pickPrice;
+                    txtTotalMoney.setText("￥" + totalMoney+"");
+                    picks.get(position).setTotalPrice(totalMoney);
                     adapter.notifyDataSetChanged();
                 }
                 break;
             case R.id.btnSub:
                 if (tag != null && tag instanceof Integer) {
                     int position = (Integer) tag;
-                    int num = Double.valueOf(picks.get(position).getGoodsNum()).intValue();
+                    int num = picks.get(position).getGoodsNum();
                     if (num > 0) {
                         num--;
                         picks.get(position).setGoodsNum(num);
+                        totalMoney -= picks.get(position).pickPrice;
+                        txtTotalMoney.setText("￥" + totalMoney+"");
+                        picks.get(position).setTotalPrice(totalMoney);
                         adapter.notifyDataSetChanged();
                     }
                 }
