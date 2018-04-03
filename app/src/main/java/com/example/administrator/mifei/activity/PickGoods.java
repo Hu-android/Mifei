@@ -73,25 +73,25 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
     public void initListData(){
 
         picks = new ArrayList<GoodsInfoModel.goodsInfo_Pick>();
-        GoodsInfoModel.goodsInfo_Pick pick0 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick0 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",100,200);
         picks.add(pick0);
-        GoodsInfoModel.goodsInfo_Pick pick1 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick1 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",100,200);
         picks.add(pick1);
-        GoodsInfoModel.goodsInfo_Pick pick2 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",50,200);
+        GoodsInfoModel.goodsInfo_Pick pick2 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",50,200);
         picks.add(pick2);
-        GoodsInfoModel.goodsInfo_Pick pick3 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",25,200);
+        GoodsInfoModel.goodsInfo_Pick pick3 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",25,200);
         picks.add(pick3);
-        GoodsInfoModel.goodsInfo_Pick pick4 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",11.5,200);
+        GoodsInfoModel.goodsInfo_Pick pick4 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",11.5,200);
         picks.add(pick4);
-        GoodsInfoModel.goodsInfo_Pick pick5 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",7,200);
+        GoodsInfoModel.goodsInfo_Pick pick5 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",7,200);
         picks.add(pick5);
-        GoodsInfoModel.goodsInfo_Pick pick6 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick6 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",100,200);
         picks.add(pick6);
-        GoodsInfoModel.goodsInfo_Pick pick7 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",546,200);
+        GoodsInfoModel.goodsInfo_Pick pick7 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",546,200);
         picks.add(pick7);
-        GoodsInfoModel.goodsInfo_Pick pick8 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick8 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",100,200);
         picks.add(pick8);
-        GoodsInfoModel.goodsInfo_Pick pick9 =  new GoodsInfoModel.goodsInfo_Pick("米菲纸尿裤",100,200);
+        GoodsInfoModel.goodsInfo_Pick pick9 =  new GoodsInfoModel.goodsInfo_Pick(R.drawable.default_place_holder,"米菲纸尿裤",100,200);
         picks.add(pick9);
 
         adapter = new GoodsPickAdapter(mContext,picks);

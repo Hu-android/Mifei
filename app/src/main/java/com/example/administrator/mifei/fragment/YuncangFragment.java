@@ -71,8 +71,6 @@ public class YuncangFragment extends BaseGoodsGroup{
     }
 
     public void initList(){
-
-
         info = new ArrayList<GoodsInfoModel.goodsInfo_YCKCTop>();
 
         GoodsInfoModel.goodsInfo_YCKCTop info0 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤1",123,160,R.drawable.default_place_holder);

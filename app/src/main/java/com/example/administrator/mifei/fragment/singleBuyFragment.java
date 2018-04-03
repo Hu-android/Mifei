@@ -1,14 +1,8 @@
 package com.example.administrator.mifei.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.common.commonbase.BaseFragment;
 import com.example.administrator.mifei.R;
@@ -21,12 +15,12 @@ import java.util.List;
 import butterknife.Bind;
 
 /**
- * Created by Administrator on 2018/4/2 0002.
+ * Created by Administrator on 2018/4/3 0003.
  */
 
-public class caseBuyFragment extends BaseFragment {
-    @Bind(R.id.case_listView)
-    RecyclerView case_listView;
+public class singleBuyFragment extends BaseFragment{
+    @Bind(R.id.single_listView)
+    RecyclerView single_listView;
     private caseAdapter adapter;
     private List<GoodsInfoModel.goodsInfo_Buy> buys = new ArrayList<>();
 
@@ -40,16 +34,16 @@ public class caseBuyFragment extends BaseFragment {
 
     @Override
     protected int getLayoutResource() {
-        return R.layout.fragment_case_buy;
+        return R.layout.fragment_single_buy;
     }
 
     @Override
     protected void initView() {
         initData();
         adapter = new caseAdapter(mContext,buys);
-        case_listView.setAdapter(adapter);
+        single_listView.setAdapter(adapter);
 
-        case_listView.setLayoutManager(new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false));
+        single_listView.setLayoutManager(new LinearLayoutManager(mContext,LinearLayoutManager.VERTICAL,false));
     }
 
     private void initData(){

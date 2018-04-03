@@ -11,22 +11,31 @@
     <include
         layout="@layout/title_back_view">
     </include>
-
-    <com.flyco.tablayout.SlidingTabLayout
+    <com.flyco.tablayout.CommonTabLayout
         android:id="@+id/tab_layout_buy_goods"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/white"
-        tl:tl_textSelectColor="#000000"
-        tl:tl_textUnselectColor="#66000000"
+        tl:tl_iconVisible="false"
+        tl:tl_indicator_width="20dp"
+        tl:tl_indicator_height="3dp"
         tl:tl_indicator_color="@color/btn_color_blue"
-        tl:tl_indicator_width="10dp"/>
-
-    <android.support.v4.view.ViewPager
-        android:layout_weight="1"
-        android:id="@+id/vp"
+        tl:tl_textsize="15sp"
+        tl:tl_textSelectColor="#FF292929"
+        tl:tl_textUnselectColor="#FF292929">
+    </com.flyco.tablayout.CommonTabLayout>
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.common.commonview.viewpager.UnScrollViewPager
+            android:id="@+id/view_paper_buy_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.common.commonview.viewpager.UnScrollViewPager>
+    </FrameLayout>
 
+    <include
+        layout="@layout/total_money">
+    </include>
 </LinearLayout>
