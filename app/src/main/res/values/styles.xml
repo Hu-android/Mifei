@@ -29,5 +29,10 @@
         <item name="android:paddingTop">@dimen/Android_12dp</item>
         <item name="android:paddingBottom">@dimen/Android_12dp</item>
     </style>
+    
+    <!--RadioButton-->
+    <style name="RadioButton_blue">
+        <item name="android:button">@drawable/custom_radio_btn</item>
+    </style>
 
 </resources>

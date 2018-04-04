@@ -3,10 +3,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.RecyclerView
+    <ListView
         android:id="@+id/single_listView"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </ListView>
+
+    <com.example.administrator.mifei.view.Total_Money
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+    </com.example.administrator.mifei.view.Total_Money>
 
 </LinearLayout>

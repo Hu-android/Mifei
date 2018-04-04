@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
+
 /**
  * Created by zhang on 2016/12/27.
  * 使用方法：
@@ -29,6 +30,7 @@ public class GlideCircleBorderTransform extends BitmapTransformation {
     public GlideCircleBorderTransform(Context context) {
         super(context);
     }
+
 
     public GlideCircleBorderTransform(Context context, int borderWidth, int borderColor) {
         super(context);

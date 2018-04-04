@@ -5,14 +5,10 @@
     android:orientation="vertical"
     tools:context="com.example.administrator.mifei.fragment.ZhigouFragment">
 
-    <include
-        layout="@layout/title_back_view">
-    </include>
-
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/list1">
+        android:id="@+id/list_zhigou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     </ListView>
 </LinearLayout>

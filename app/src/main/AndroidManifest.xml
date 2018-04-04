@@ -25,7 +25,8 @@
         <activity android:name=".activity.Mine" />
         <activity android:name=".main.MainActivity" />
         <activity android:name=".activity.PickGoods" />
-        <activity android:name=".activity.BuyGoods"></activity>
+        <activity android:name=".activity.BuyGoods" />
+        <activity android:name=".activity.buyPay"></activity>
     </application>
 
 </manifest>

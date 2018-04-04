@@ -34,8 +34,4 @@
             android:layout_height="match_parent">
         </com.common.commonview.viewpager.UnScrollViewPager>
     </FrameLayout>
-
-    <include
-        layout="@layout/total_money">
-    </include>
 </LinearLayout>

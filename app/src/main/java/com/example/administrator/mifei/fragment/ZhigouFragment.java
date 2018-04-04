@@ -1,12 +1,29 @@
 package com.example.administrator.mifei.fragment;
 
 
+import android.graphics.Color;
+import android.os.Build;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.common.commonbase.BaseFragment;
+import com.common.commonbase.BaseTitleBackFragment;
+import com.common.commonutil.StatusBarCompat;
 import com.example.administrator.mifei.R;
-import com.example.administrator.mifei.adapter.GoodsAdapter;
-import com.example.administrator.mifei.bean.GoodsInfoModel;
-import com.example.administrator.mifei.view.BaseGoodsGroup;
+import com.example.administrator.mifei.adapter.ViewPageAdapter;
 
 
 import java.util.ArrayList;
@@ -14,12 +31,15 @@ import java.util.List;
 
 import butterknife.Bind;
 
-public class ZhigouFragment extends BaseGoodsGroup {
+public class ZhigouFragment extends BaseFragment{
 
-    @Bind(R.id.list1)
-    ListView listView;
-    private  List<GoodsInfoModel.goodsInfo_YCKCTop> info = new ArrayList<GoodsInfoModel.goodsInfo_YCKCTop>();
-    GoodsAdapter adapter;
+    private DrawerLayout tran_drawer_drawer;
+    private Toolbar tran_drawer_toolbar;
+    private ActionBarDrawerToggle toggle;
+    @Bind(R.id.list_zhigou)
+    ListView list_zhigou;
+
+    private final String data[] = { "one", "two", "three", "four", "five", "six", "seven" };
 
     @Override
     protected int getLayoutResource() {
@@ -27,43 +47,26 @@ public class ZhigouFragment extends BaseGoodsGroup {
     }
 
     @Override
-    public String getTitleName() {
-        return "直购";
+    protected void initView() {
+        initHeaderView();
+
     }
 
-    @Override
-    public int getImgSrc() {
-        return R.drawable.default_place_holder;
+    private void initHeaderView(){
+        View view = LayoutInflater.from(mContext).inflate(R.layout.viewpager_item, null);
+        ViewPager viewpager = (ViewPager)view.findViewById(R.id.headViewPager);
+        List<ImageView> listtemp = new ArrayList<>();
+        for(int i = 0;i<4;i++)
+        {
+            ImageView img = new ImageView(mContext);
+            img.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,100));
+            img.setScaleType(ScaleType.FIT_XY);
+            img.setBackgroundResource(R.drawable.default_place_holder);
+            listtemp.add(img);
+        }
+        ViewPageAdapter viewadapter = new ViewPageAdapter(listtemp);
+        list_zhigou.addHeaderView(view);
+        list_zhigou.setAdapter(new ArrayAdapter<>(mContext, android.R.layout.simple_list_item_1, data));
+        viewpager.setAdapter(viewadapter);
     }
-
-    public void initView(){
-        initList();
-    }
-
-    public void initList(){
-
-        info = new ArrayList<GoodsInfoModel.goodsInfo_YCKCTop>();
-
-
-        GoodsInfoModel.goodsInfo_YCKCTop info1 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤1",123,160,R.drawable.default_place_holder);
-        info.add(info1);
-        GoodsInfoModel.goodsInfo_YCKCTop info2 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤2",12343,103,R.drawable.default_place_holder);
-        info.add(info2);
-        GoodsInfoModel.goodsInfo_YCKCTop info3 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤3",4234,104,R.drawable.default_place_holder);
-        info.add(info3);
-        GoodsInfoModel.goodsInfo_YCKCTop info4 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤4",435,150,R.drawable.default_place_holder);
-        info.add(info4);
-        GoodsInfoModel.goodsInfo_YCKCTop info5 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤5",54665,750,R.drawable.default_place_holder);
-        info.add(info5);
-        GoodsInfoModel.goodsInfo_YCKCTop info6 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤6",768,190,R.drawable.default_place_holder);
-        info.add(info6);
-        GoodsInfoModel.goodsInfo_YCKCTop info7 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤7",679,1890,R.drawable.default_place_holder);
-        info.add(info7);
-
-        adapter = new GoodsAdapter(mContext);
-        adapter.addData(info);
-        listView.setAdapter(adapter);
-    }
-
-
 }
