@@ -2,10 +2,7 @@ package com.example.administrator.mifei.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.DataSetObserver;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,17 +12,13 @@ import android.widget.Toast;
 
 import com.common.commonbase.BaseBackActivity;
 import com.example.administrator.mifei.R;
-import com.example.administrator.mifei.adapter.GoodsAdapter;
 import com.example.administrator.mifei.adapter.GoodsPickAdapter;
 import com.example.administrator.mifei.bean.GoodsInfoModel;
-import com.example.administrator.mifei.bean.ShopCart;
-import com.example.administrator.mifei.main.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
 public class PickGoods extends BaseBackActivity implements View.OnClickListener,AdapterView.OnItemClickListener{
 

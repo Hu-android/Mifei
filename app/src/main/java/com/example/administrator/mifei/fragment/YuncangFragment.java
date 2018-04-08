@@ -1,11 +1,8 @@
 package com.example.administrator.mifei.fragment;
 
 
-
-
 import android.view.View;
 import android.widget.ListView;
-
 
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.activity.BuyGoods;
@@ -14,7 +11,6 @@ import com.example.administrator.mifei.adapter.GoodsAdapter;
 import com.example.administrator.mifei.bean.GoodsInfoModel;
 import com.example.administrator.mifei.view.BaseGoodsGroup;
 import com.example.administrator.mifei.view.Yc_Top_group;
-
 
 import java.util.ArrayList;
 import java.util.List;

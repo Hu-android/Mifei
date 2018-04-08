@@ -2,34 +2,27 @@ package com.example.administrator.mifei.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import com.common.commonbase.BaseBackActivity;
 import com.common.commonutil.LogUtils;
 import com.common.commonview.viewpager.UnScrollViewPager;
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.bean.TabEntity;
-import com.example.administrator.mifei.fragment.MessFragment;
-import com.example.administrator.mifei.fragment.MineFragment;
-import com.example.administrator.mifei.fragment.YuncangFragment;
-import com.example.administrator.mifei.fragment.ZhigouFragment;
 import com.example.administrator.mifei.fragment.caseBuyFragment;
 import com.example.administrator.mifei.fragment.singleBuyFragment;
-import com.example.administrator.mifei.main.MainActivity;
 import com.example.administrator.mifei.utils.ViewFindUtils;
 import com.flyco.tablayout.CommonTabLayout;
-import com.flyco.tablayout.SlidingTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 
-
 import java.util.ArrayList;
-import java.util.Random;
 
 import butterknife.Bind;
 

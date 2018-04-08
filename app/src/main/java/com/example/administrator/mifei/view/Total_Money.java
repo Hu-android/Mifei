@@ -7,14 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.activity.buyPay;
-
-import org.w3c.dom.Text;
-
-import butterknife.Bind;
 
 /**
  * Created by Administrator on 2018/4/2 0002.

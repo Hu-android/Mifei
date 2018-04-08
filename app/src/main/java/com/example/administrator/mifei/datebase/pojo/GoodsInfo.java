@@ -1,9 +1,6 @@
 package com.example.administrator.mifei.datebase.pojo;
 
-import com.example.administrator.mifei.datebase.pojo.goodsInfo.BaseGoodsInfo;
 import com.example.administrator.mifei.datebase.pojo.goodsInfo.BaseModel;
-import com.litesuits.orm.db.annotation.Check;
-import com.litesuits.orm.db.annotation.NotNull;
 import com.litesuits.orm.db.annotation.Table;
 import com.litesuits.orm.db.annotation.Unique;
 

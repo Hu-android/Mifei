@@ -2,17 +2,15 @@ package com.example.administrator.mifei.main;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.common.commonbase.BaseMainActivity;
 import com.common.commonutil.LogUtils;
 import com.common.commonview.viewpager.UnScrollViewPager;
 import com.example.administrator.mifei.R;
-import com.example.administrator.mifei.activity.Pwd_Reset;
 import com.example.administrator.mifei.bean.TabEntity;
 import com.example.administrator.mifei.fragment.MessFragment;
 import com.example.administrator.mifei.fragment.MineFragment;
@@ -23,7 +21,6 @@ import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 
 import java.util.ArrayList;
-import java.util.Timer;
 
 import butterknife.Bind;
 

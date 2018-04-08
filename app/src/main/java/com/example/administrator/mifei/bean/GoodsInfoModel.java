@@ -173,4 +173,68 @@ public class GoodsInfoModel extends BaseHttpModel{
         }
     }
 
+    public static class goodsInfo_Zhigou extends BaseHttpModel {
+        public String goodsName;
+        public double pickPriceHigher;
+        public double pickPrice;
+        public double totalPrice;
+        public int goodsNum;
+        public int goodsImage;
+
+        public goodsInfo_Zhigou(String goodsName, double pickPrice, double pickPriceHigher,int goodsImage) {
+            this.goodsImage = goodsImage;
+            this.pickPrice = pickPrice;
+            this.pickPriceHigher = pickPriceHigher;
+            this.goodsName = goodsName;
+        }
+
+        public String getGoodsName() {
+            return goodsName;
+        }
+
+        public void setGoodsName(String goodsName) {
+            this.goodsName = goodsName;
+        }
+
+        public double getPickPriceHigher() {
+            return pickPriceHigher;
+        }
+
+        public void setPickPriceHigher(double pickPriceHigher) {
+            this.pickPriceHigher = pickPriceHigher;
+        }
+
+        public double getPickPrice() {
+            return pickPrice;
+        }
+
+        public void setPickPrice(double pickPrice) {
+            this.pickPrice = pickPrice;
+        }
+
+        public double getTotalPrice() {
+            return totalPrice;
+        }
+
+        public void setTotalPrice(double totalPrice) {
+            this.totalPrice = totalPrice;
+        }
+
+        public int getGoodsNum() {
+            return goodsNum;
+        }
+
+        public void setGoodsNum(int goodsNum) {
+            this.goodsNum = goodsNum;
+        }
+
+        public int getGoodsImage() {
+            return goodsImage;
+        }
+
+        public void setGoodsImage(int goodsImage) {
+            this.goodsImage = goodsImage;
+        }
+    }
+
 }
