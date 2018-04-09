@@ -3,16 +3,16 @@
     xmlns:tl="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingTop="25dp"
     tools:context="com.example.administrator.mifei.fragment.MessFragment">
 
     <com.flyco.tablayout.SegmentTabLayout
         android:id="@+id/tab_layout_mess"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        tl:tl_bar_color="#ffffff"
         tl:tl_indicator_color="@color/btn_color_blue"
         tl:tl_indicator_corner_radius="8dp"
         tl:tl_tab_padding="20dp">

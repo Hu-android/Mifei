@@ -10,9 +10,6 @@ import java.util.List;
 
 public class GoodsInfoModel extends BaseHttpModel{
 
-    public List<txtTitle>txtTitles;
-    public List<goodsInfo_YCKCTop> goodsInfos_YCKCTop;
-    public List<goodsInfo_Pick> goodsInfo_picks;
     public static class goodsInfo_YCKCTop extends BaseHttpModel{
         public String goodsName;
         public int goodsImage;
