@@ -16,11 +16,14 @@ public class MessageModel {
         public String msgDateTime;
 
 
-        public messageInfo(int imgResourse) {
+        public messageInfo(int imgResourse, String msgTitle, String msgInfo/*,String msgDateTime*/) {
+            this.msgDateTime = msgDateTime;
+            this.msgInfo = msgInfo;
+            this.msgTitle = msgTitle;
             this.imgResourse = imgResourse;
         }
 
-        public messageInfo(int imgResourse, String msgTitle, String msgOrderNum, String msgInfo, String msgDateTime) {
+        public messageInfo(int imgResourse, String msgTitle, String msgOrderNum, String msgInfo/*, String msgDateTime*/) {
             this.imgResourse = imgResourse;
             this.msgTitle = msgTitle;
             this.msgOrderNum = msgOrderNum;

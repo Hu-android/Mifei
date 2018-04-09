@@ -71,11 +71,16 @@ public class MsgAdapter extends BaseAdapter{
             holder.txtMsgInfo = (TextView) v.findViewById(R.id.txt_msg_info);
             holder.txtDateTime = (TextView) v.findViewById(R.id.txt_datetime);
         }
-        /*holder.txtMsgTitle.setText(msg.get(position).getMsgTitle());
-        holder.txtOrderNum.setText(msg.get(position).getMsgOrderNum());
+        if (msg.get(position).getImgResourse() == R.drawable.company){
+            holder.txtOrderNum.setVisibility(View.GONE);
+        }else{
+            holder.txtOrderNum.setVisibility(View.VISIBLE);
+        }
+        holder.txtMsgTitle.setText(msg.get(position).getMsgTitle());
+        holder.txtOrderNum.setText("订单编号" + msg.get(position).getMsgOrderNum());
         holder.txtMsgInfo.setText(msg.get(position).getMsgInfo());
-        holder.txtDateTime.setText(msg.get(position).getMsgDateTime());*/
-/*        holder.circleImg.setImageResource(msg.get(position).getImgResourse());*/
+        /** 时间时间时间    设置时间*/
+       // holder.txtDateTime.setText(msg.get(position).getMsgDateTime());
         glideRequest = Glide.with(mContext);
         glideRequest.load(msg.get(position).getImgResourse()).transform(new GlideCircleTransform(mContext)).into(holder.circleImg);
         return v;

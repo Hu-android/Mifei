@@ -21,6 +21,13 @@ public class companyMesFragment extends BaseFragment {
 
     private int[] Images = {R.drawable.company,R.drawable.company,R.drawable.company,R.drawable.company,R.drawable.company,R.drawable.company
             ,R.drawable.company,R.drawable.company,R.drawable.company,R.drawable.company,R.drawable.company};
+    private String[] msgTitle = {"公告","公告","公告","公告","公告","公告","公告","公告","公告","公告","公告"};
+    private String[] msgInfo = {"关于春节前快递停发通知","暂停日用裤拉拉裤子xl码和夜用啦啦裤的断货通知。",
+            "关于春节前快递停发通知 ", "暂停日用裤拉拉裤子xl码和夜用啦啦裤的断货通知。",
+            "关于春节前快递停发通知",
+            "暂停日用裤拉拉裤子xl码和夜用啦啦裤的断货通知。","关于春节前快递停发通知",
+            "暂停日用裤拉拉裤子xl码和夜用啦啦裤的断货通知。","关于春节前快递停发通知",
+            "暂停日用裤拉拉裤子xl码和夜用啦啦裤的断货通知。 ","关于春节前快递停发通知"};
     List<MessageModel.messageInfo> msg = new ArrayList<>();
 
     @Override
@@ -40,7 +47,7 @@ public class companyMesFragment extends BaseFragment {
 
     public void initList(){
         for (int i = 0; i < Images.length; i++){
-            msg.add(new MessageModel.messageInfo(Images[i]));
+            msg.add(new MessageModel.messageInfo(Images[i],msgTitle[i],msgInfo[i]));
         }
         adapter = new MsgAdapter(mContext,msg);
         list_msg_company.setAdapter(adapter);

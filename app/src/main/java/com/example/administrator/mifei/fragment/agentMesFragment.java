@@ -24,6 +24,14 @@ public class agentMesFragment extends BaseFragment {
 
     private int[] Images = {R.drawable.agent,R.drawable.agent,R.drawable.agent,R.drawable.agent,R.drawable.agent,R.drawable.agent
             ,R.drawable.agent,R.drawable.agent,R.drawable.agent,R.drawable.agent,R.drawable.agent};
+    private String[] msgTitle = {"款项信息","款项信息","款项信息","款项信息","款项信息","款项信息","款项信息","款项信息","款项信息","款项信息","款项信息"};
+    private String[] msgOrderNum = {"123456789","123456789","123456789","123456789","123456789","123456789","123456789","123456789","123456789","123456789","123456789"};
+    private String[] msgInfo = {"原因如下：请上传队公司账户汇款完整后，带交易凭证，请再次确认完整的汇款信息之后在提交。 ","原因如下：请上传队公司账户汇款完整后，带交易凭证。",
+            "原因如下：请上传队公司账户汇款完整后，带交易凭证，请再次确认完整的汇款信息之后在提交。 ", "原因如下：请上传队公司账户汇款完整后，带交易凭证。",
+            "原因如下：请上传队公司账户汇款完整后，带交易凭证，请再次确认完整的汇款信息之后在提交。 ",
+            "原因如下：请上传队公司账户汇款完整后，带交易凭证。","原因如下：请上传队公司账户汇款完整后，带交易凭证。",
+            "原因如下：请上传队公司账户汇款完整后，带交易凭证。","原因如下：请上传队公司账户汇款完整后，带交易凭证，请再次确认完整的汇款信息之后在提交。 ",
+            "原因如下：请上传队公司账户汇款完整后，带交易凭证，请再次确认完整的汇款信息之后在提交。 ","原因如下：请上传队公司账户汇款完整后，带交易凭证。"};
     List<MessageModel.messageInfo> msg = new ArrayList<>();
 
     @Override
@@ -43,7 +51,7 @@ public class agentMesFragment extends BaseFragment {
 
     public void initList(){
         for (int i = 0; i < Images.length; i++){
-            msg.add(new MessageModel.messageInfo(Images[i]));
+            msg.add(new MessageModel.messageInfo(Images[i],msgTitle[i],msgOrderNum[i],msgInfo[i]));
         }
         adapter = new MsgAdapter(mContext,msg);
         list_msg_agent.setAdapter(adapter);
