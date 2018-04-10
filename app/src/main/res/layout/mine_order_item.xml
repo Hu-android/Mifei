@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mine_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/Android_20dp"
+    android:paddingBottom="@dimen/Android_14dp"
+    android:background="@color/white"
+    tools:context="com.example.administrator.mifei.view.MineOrder">
+
+    <TextView
+        android:id="@+id/purchaseorder_item"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/purchaseorder"
+        android:text="进货订单"/>
+
+    <TextView
+        android:id="@+id/lowerorder_item"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/lowerorder"
+        android:text="下级订单"/>
+
+    <TextView
+        android:id="@+id/pickorder_item"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/pickorder"
+        android:text="提货订单"/>
+
+    <TextView
+        android:id="@+id/zhigouorder_item"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/zhigouorder"
+        android:text="直购订单"/>
+
+</LinearLayout>

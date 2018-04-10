@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:paddingRight="@dimen/Android_15dp"
+    android:paddingLeft="@dimen/Android_15dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/function_img"
+            android:src="@drawable/wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/function_name"
+            android:text="功能名称"
+            android:layout_toRightOf="@id/function_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/enter"
+            android:id="@+id/function_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="#FFF5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/Android_44dp"-->
+        <!--&gt;-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/function_img"-->
+            <!--android:src="@drawable/wallet"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:id="@+id/function_name"-->
+            <!--android:text="功能名称"-->
+            <!--android:layout_toRightOf="@id/function_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@drawable/enter"-->
+            <!--android:id="@+id/function_enter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" /> -->
+    <!--</RelativeLayout>-->
+</RelativeLayout>

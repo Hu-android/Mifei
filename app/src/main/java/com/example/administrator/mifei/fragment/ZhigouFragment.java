@@ -34,12 +34,15 @@ public class ZhigouFragment extends BaseFragment implements AdapterView.OnItemCl
     TextView txtTotalMoney;
     ZhigouAdapter adapter;
     private double totalMoney = 0;
+
+    //测试数据
     private int[] goodsImages = {R.drawable.default_place_holder,R.drawable.default_place_holder,R.drawable.default_place_holder,R.drawable.default_place_holder,
             R.drawable.default_place_holder,R.drawable.default_place_holder};
     private String[] goodsName = {"米菲纸尿裤游泳裤训练裤","米菲纸尿裤游泳裤训练裤","米菲纸尿裤游泳裤训练裤","米菲纸尿裤游泳裤训练裤",
             "米菲纸尿裤游泳裤训练裤","米菲纸尿裤游泳裤训练裤"};
     private double[] goodsPrice = {50,100,150,200,350,124};
     private double[] goodsPriceHigher = {100,120,158,124,315,219};
+
     List<GoodsInfoModel.goodsInfo_Zhigou> zhigous = new ArrayList<>();
 
     @Override

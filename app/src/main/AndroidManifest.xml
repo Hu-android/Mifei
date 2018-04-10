@@ -2,12 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.mifei">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <!--
     Allows Glide to monitor connectivity status and restart failed requests if users go from a
     a disconnected to a connected network state.
     -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".main.MyApplication"
         android:allowBackup="true"
@@ -33,6 +34,8 @@
         <activity android:name=".activity.PickGoods" />
         <activity android:name=".activity.BuyGoods" />
         <activity android:name=".activity.buyPay" />
+        <activity android:name=".view.MineTitle" />
+        <activity android:name=".view.MineOrder"></activity>
     </application>
 
 </manifest>
