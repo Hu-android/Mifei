@@ -12,6 +12,12 @@
     <string name="tv_zhengxiang">整箱装</string>
     <string name="tv_danbao">单包装</string>
 
+    <!--PurchaseOrder tab栏-->
+    <string name="tv_all">全部</string>
+    <string name="tvUnpay">待充值</string>
+    <string name="tvLack">上级缺货</string>
+    <string name="tvComplete">已完成</string>
+
     <!--各种带数据的TextView-->
     <string name="txt_totalMoney">合计：%s</string>
 

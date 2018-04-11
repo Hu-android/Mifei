@@ -7,4 +7,18 @@
         <attr name="img_src" format="reference"/>
     </declare-styleable>
 
+    <declare-styleable name="txt_head_img_item_tii">
+        <attr name="tii_item_txt" format="string"/>
+        <attr name="tii_item_head" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="txt_img_item_ti">
+        <attr name="ti_item_txt" format="string"/>
+    </declare-styleable>
+    
+    <declare-styleable name="txt_et_item_te">
+        <attr name="te_item_txt" format="string"/>
+        <attr name="te_item_et" format="string"/>
+    </declare-styleable>
+
 </resources>

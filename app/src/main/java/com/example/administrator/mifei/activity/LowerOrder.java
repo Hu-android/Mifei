@@ -2,22 +2,17 @@ package com.example.administrator.mifei.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 
 import com.common.commonbase.BaseBackActivity;
-import com.common.commonutil.LogUtils;
-import com.common.commonview.viewpager.UnScrollViewPager;
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.bean.TabEntity;
-import com.example.administrator.mifei.fragment.caseBuyFragment;
-import com.example.administrator.mifei.fragment.singleBuyFragment;
 import com.example.administrator.mifei.utils.ViewFindUtils;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -27,28 +22,25 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 
-public class BuyGoods extends BaseBackActivity {
-
-    public static final String TAG = "BuyGoods";
-
-    @Bind(R.id.tab_layout_buy_goods)
-    public CommonTabLayout tabLayoutBuyGoods;
-    @Bind(R.id.view_paper_buy_goods)
-    ViewPager viewPager;
+public class LowerOrder extends BaseBackActivity {
+    public static final String TAG = "LowerOrder";
+    @Bind(R.id.tab_layout_lower_order)
+    CommonTabLayout tab_layout_lower_order;
+    @Bind(R.id.vp_lower_order)
+    ViewPager vp_lower_order;
 
     private final int[] mTitles = {
-            R.string.tv_zhengxiang,R.string.tv_danbao};
-
+            R.string.tv_all,R.string.tvUnpay,R.string.tvLack,R.string.tvComplete};
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_buy_goods;
+        return R.layout.activity_lower_order;
     }
 
     @Override
     public String getTitleName() {
-        return "提货";
+        return "下级订单";
     }
 
     @Override
@@ -58,35 +50,30 @@ public class BuyGoods extends BaseBackActivity {
 
     @Override
     public void initView(Bundle savedInstanceState) {
-        initTab();
+        Log.d(TAG,"PickOrder——————>");
+        setVp_pick_order();
     }
 
-    public static void toActivity(Context context){
-        Intent intent = new Intent(context,BuyGoods.class);
-        context.startActivity(intent);
-    }
-
-    public void initTab(){
+    public void setVp_pick_order(){
         for (int i = 0;i < mTitles.length;i++){
             mTabEntities.add(new TabEntity(getString(mTitles[i])));
         }
 
         View mDecorView = getWindow().getDecorView();
-        tabLayoutBuyGoods = ViewFindUtils.find(mDecorView,R.id.tab_layout_buy_goods);
+        tab_layout_lower_order = ViewFindUtils.find(mDecorView,R.id.tab_layout_lower_order);
 
-        tabLayoutBuyGoods.setTabData(mTabEntities);
+        tab_layout_lower_order.setTabData(mTabEntities);
         //点击监听
-        tabLayoutBuyGoods.setOnTabSelectListener(new OnTabSelectListener() {
+        tab_layout_lower_order.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelect(int position) {
-                viewPager.setCurrentItem(position, false);
+                vp_lower_order.setCurrentItem(position, false);
             }
 
             @Override
-            public void onTabReselect(int position) {
-            }
+            public void onTabReselect(int position) {}
         });
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        vp_lower_order.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -94,7 +81,7 @@ public class BuyGoods extends BaseBackActivity {
 
             @Override
             public void onPageSelected(int position) {
-                tabLayoutBuyGoods.setCurrentTab(position);
+                tab_layout_lower_order.setCurrentTab(position);
             }
 
             @Override
@@ -106,11 +93,11 @@ public class BuyGoods extends BaseBackActivity {
     }
 
     private void initViewPager() {
-        viewPager.setOffscreenPageLimit(mTitles.length);
-        BuyGoods.MyPagerAdapter pageAdapter = new BuyGoods.MyPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(pageAdapter);
-        tabLayoutBuyGoods.setCurrentTab(0);
-        viewPager.setCurrentItem(0, false);
+        vp_lower_order.setOffscreenPageLimit(mTitles.length);
+        LowerOrder.MyPagerAdapter pageAdapter = new LowerOrder.MyPagerAdapter(getSupportFragmentManager());
+        vp_lower_order.setAdapter(pageAdapter);
+        tab_layout_lower_order.setCurrentTab(0);
+        vp_lower_order.setCurrentItem(0, false);
     }
 
     private class MyPagerAdapter extends FragmentPagerAdapter {
@@ -132,11 +119,17 @@ public class BuyGoods extends BaseBackActivity {
         public Fragment getItem(int position) {
             Fragment fragment = null;
             switch (position) {
-                case 0://整箱装
-                    fragment = new caseBuyFragment();
+                case 0://全部
+                    fragment = new orderAll();
                     break;
-                case 1://单包装
-                    fragment = new singleBuyFragment();
+                case 1://待充值
+                    fragment = new orderAll();
+                    break;
+                case 2://上级缺货
+                    fragment = new orderAll();
+                    break;
+                case 3://已完成
+                    fragment = new orderAll();
                     break;
                 default:
                     break;
@@ -145,4 +138,8 @@ public class BuyGoods extends BaseBackActivity {
         }
     }
 
+    public static void toActivity(Context context){
+        Intent intent = new Intent(context,LowerOrder.class);
+        context.startActivity(intent);
+    }
 }

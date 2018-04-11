@@ -123,40 +123,6 @@ public class ZhigouAdapter extends BaseAdapter implements View.OnClickListener{
         holder.imgPlus.setTag(position);
         v.setTag(holder);
         return v;
-
-        /*if (convertView == null){
-            convertView = inflater.inflate(R.layout.yckc_list_item,null);
-        }
-        TextView txtTop = (TextView) ViewHolderUtils.get(convertView,R.id.txtTop);
-        TextView txtMid = (TextView) ViewHolderUtils.get(convertView,R.id.txtMid);
-        TextView txtMid2 = (TextView) ViewHolderUtils.get(convertView,R.id.txtMid2);
-        TextView txtBottom = (TextView) ViewHolderUtils.get(convertView,R.id.txtBottom);
-        TextView txtNum = (TextView) ViewHolderUtils.get(convertView,R.id.txtNum);
-        TextView txtNumX = (TextView) ViewHolderUtils.get(convertView,R.id.txtNumX);
-        TextView txtTotalMoney = (TextView) ViewHolderUtils.get(convertView,R.id.txtTotalMoney);
-        ImageView imgGoods = (ImageView) ViewHolderUtils.get(convertView,R.id.img_yckc_list_item);
-        ImageButton imgPlus = (ImageButton) ViewHolderUtils.get(convertView,R.id.btnPlus);
-        ImageButton imgSub = (ImageButton) ViewHolderUtils.get(convertView,R.id.btnSub);
-
-        txtTop.setText(zhigous.get(position).getGoodsName());
-        txtMid.setText(zhigous.get(position).getPickPrice()+"");
-        txtMid2.setText(zhigous.get(position).getPickPriceHigher()+"");
-        txtMid.setTextColor(Color.parseColor("#FFE63549"));
-        txtBottom.setVisibility(View.GONE);
-        txtNumX.setVisibility(View.GONE);
-        imgGoods.setImageResource(zhigous.get(position).getGoodsImage());
-        if (zhigous.get(position).getGoodsNum() == 0){
-            imgSub.setVisibility(View.GONE);
-            txtNum.setVisibility(View.GONE);
-        }else if (zhigous.get(position).getGoodsNum() != 0){
-            imgSub.setVisibility(View.VISIBLE);
-            txtNum.setVisibility(View.VISIBLE);
-        }
-        imgPlus.setOnClickListener(this);
-        imgPlus.setTag(position);
-        imgSub.setOnClickListener(this);
-        imgSub.setTag(position);
-        return convertView;*/
     }
     private static class ViewHolder{
         TextView txtTop, txtMid, txtBottom, txtNum, txtMid2, txtNumX,txtTotalMoney;

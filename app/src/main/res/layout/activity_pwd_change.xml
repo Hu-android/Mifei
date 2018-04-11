@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:hjl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_pwd_change"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.mifei.activity.PwdChange">
+
+    <include
+        layout="@layout/title_back_view">
+    </include>
+
+    <com.example.administrator.mifei.view.txt_et_item
+        android:layout_marginTop="@dimen/Android_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="原密码"
+        hjl:te_item_et="请输入原始密码">
+    </com.example.administrator.mifei.view.txt_et_item>
+    <com.example.administrator.mifei.view.txt_et_item
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="新密码"
+        hjl:te_item_et="请输入新密码">
+    </com.example.administrator.mifei.view.txt_et_item>
+    <com.example.administrator.mifei.view.txt_et_item
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="新密码确认"
+        hjl:te_item_et="请输入新密码确认">
+    </com.example.administrator.mifei.view.txt_et_item>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/btn_pwd_change"
+        android:text="确认修改"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_marginLeft="@dimen/Android_20dp"
+        android:layout_marginRight="@dimen/Android_20dp"
+        android:layout_marginBottom="@dimen/Android_200dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

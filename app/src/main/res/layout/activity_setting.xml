@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:hjl = "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.mifei.activity.Setting">
+
+    <include
+        layout="@layout/title_back_view">
+    </include>
+
+    <com.example.administrator.mifei.view.txt_head_img_item
+        android:id="@+id/headChange"
+        android:layout_marginTop="@dimen/Android_25dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_70dp"
+        hjl:tii_item_txt="修改头像"
+        hjl:tii_item_head="@drawable/default_place_holder">
+    </com.example.administrator.mifei.view.txt_head_img_item>
+
+    <com.example.administrator.mifei.view.txt_img_item
+        android:id="@+id/pwdChange"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:ti_item_txt="修改密码">
+    </com.example.administrator.mifei.view.txt_img_item>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+    <Button
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="退出系统"
+        android:background="@drawable/btn_shape"
+        android:layout_marginBottom="200dp"
+        android:layout_marginRight="@dimen/Android_20dp"
+        android:layout_marginLeft="@dimen/Android_20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

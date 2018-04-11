@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/Android_15dp"
+    android:paddingRight="@dimen/Android_15dp">
+
+        <TextView
+            android:textSize="15sp"
+            android:layout_centerVertical="true"
+            android:textColor="#FF333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tii_item_txt_left"
+            android:text="输入文字" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tii_item_img_enter"
+            android:src="@drawable/enter"/>
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/Android_50dp"
+            android:layout_height="@dimen/Android_50dp"
+            android:id="@+id/tii_item_img_head"
+            android:src="@drawable/default_place_holder"
+            android:layout_toLeftOf="@id/tii_item_img_enter"
+            android:layout_margin="@dimen/Android_10dp"/>
+
+        <View
+            android:background="#FFF5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

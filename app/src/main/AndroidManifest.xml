@@ -34,8 +34,13 @@
         <activity android:name=".activity.PickGoods" />
         <activity android:name=".activity.BuyGoods" />
         <activity android:name=".activity.buyPay" />
-        <activity android:name=".view.MineTitle" />
-        <activity android:name=".view.MineOrder"></activity>
+        <activity android:name=".activity.Setting" />
+        <activity android:name=".activity.PurchaseOrder" />
+        <activity android:name=".activity.orderAll" />
+        <activity android:name=".activity.PickOrder" />
+        <activity android:name=".activity.LowerOrder" />
+        <activity android:name=".activity.ZhigouOrder" />
+        <activity android:name=".activity.PwdChange"></activity>
     </application>
 
 </manifest>

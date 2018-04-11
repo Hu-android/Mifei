@@ -4,6 +4,7 @@
     android:layout_height="44dp"
     android:paddingRight="@dimen/Android_15dp"
     android:paddingLeft="@dimen/Android_15dp"
+    android:id="@+id/function_item"
     android:background="@color/white">
 
     <RelativeLayout
