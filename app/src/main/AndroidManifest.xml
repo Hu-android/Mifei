@@ -40,7 +40,10 @@
         <activity android:name=".activity.PickOrder" />
         <activity android:name=".activity.LowerOrder" />
         <activity android:name=".activity.ZhigouOrder" />
-        <activity android:name=".activity.PwdChange"></activity>
+        <activity android:name=".activity.PwdChange" />
+        <activity android:name=".activity.MineComprehensive" />
+        <activity android:name=".activity.MineReceiveAddress" />
+        <activity android:name=".view.MineAddressItem"></activity>
     </application>
 
 </manifest>

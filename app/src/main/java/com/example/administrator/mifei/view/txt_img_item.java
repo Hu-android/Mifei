@@ -7,9 +7,11 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.administrator.mifei.R;
+import com.example.administrator.mifei.utils.ClickListener;
 
 /**
  * Created by Administrator on 2018/4/11 0011.
@@ -17,6 +19,8 @@ import com.example.administrator.mifei.R;
 
 public class txt_img_item extends FrameLayout {
     private View mView;
+    private RelativeLayout txt_img_item;
+    private ClickListener clickListener;
     private TextView ti_item_txt_left;
 
     public txt_img_item(Context context) {
@@ -38,8 +42,21 @@ public class txt_img_item extends FrameLayout {
 
     private void initView(Context context){
         mView = LayoutInflater.from(context).inflate(R.layout.txt_img_item,null);
+        txt_img_item = (RelativeLayout) mView.findViewById(R.id.txt_img_item);
         ti_item_txt_left = (TextView) mView.findViewById(R.id.ti_item_txt_left);
+        txt_img_item.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (clickListener != null){
+                    clickListener.Click(v);
+                }
+            }
+        });
         this.addView(mView);
+    }
+
+    public void setCustomOnClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
     }
 
     private void initData(Context context,AttributeSet attrs){

@@ -1,19 +1,16 @@
 package com.example.administrator.mifei.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.common.commonutil.CollectionUtils;
 import com.example.administrator.mifei.R;
-import com.example.administrator.mifei.bean.GoodsInfoModel;
-import com.example.administrator.mifei.bean.fragment_mine_model;
+import com.example.administrator.mifei.bean.fragmentMineModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +19,9 @@ import java.util.List;
  * Created by Administrator on 2018/4/10 0010.
  */
 
-public class fragment_mine_adapter extends BaseAdapter {
+public class fragmentMineAdapter extends BaseAdapter {
     private Context context;
-    private List<fragment_mine_model.mineFunctionView> functionViews = new ArrayList<>();
+    private List<fragmentMineModel.mineFunctionView> functionViews = new ArrayList<>();
     private LayoutInflater inflater;
     private final int TYPE_COUNT = 3;
     private final int TYPE_ONE = 0;
@@ -52,12 +49,12 @@ public class fragment_mine_adapter extends BaseAdapter {
         this.onZhigouorder = onZhigouorder;
     }
 
-    public fragment_mine_adapter(Context context) {
+    public fragmentMineAdapter(Context context) {
         this.context = context;
         inflater = LayoutInflater.from(context);
     }
 
-    public void addData(List<fragment_mine_model.mineFunctionView> list) {
+    public void addData(List<fragmentMineModel.mineFunctionView> list) {
         if (CollectionUtils.isEmpty(list)) return;
         functionViews.clear();
         functionViews.addAll(list);
@@ -81,7 +78,7 @@ public class fragment_mine_adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        fragment_mine_model.mineFunctionView functionView = functionViews.get(position);
+        fragmentMineModel.mineFunctionView functionView = functionViews.get(position);
         currentType = getItemViewType(position);
         if (currentType == TYPE_ONE) {
             ViewHolderOne viewHolderOne;
@@ -146,8 +143,7 @@ public class fragment_mine_adapter extends BaseAdapter {
 
     @Override
     public int getItemViewType(int position) {
-        fragment_mine_model.mineFunctionView functionView = functionViews.get(position);
-        int type = functionView.getType();
+        int type = functionViews.get(position).getType();
         switch (type) {
             case TYPE_ONE:
                 return TYPE_ONE;

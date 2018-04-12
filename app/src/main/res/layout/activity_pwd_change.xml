@@ -12,6 +12,13 @@
         layout="@layout/title_back_view">
     </include>
 
+    <com.common.commonview.scrollview.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <com.example.administrator.mifei.view.txt_et_item
         android:layout_marginTop="@dimen/Android_20dp"
         android:layout_width="match_parent"
@@ -47,6 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
+    </LinearLayout>
+    </com.common.commonview.scrollview.OverScrollView>
 
 </LinearLayout>

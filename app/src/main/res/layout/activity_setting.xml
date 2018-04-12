@@ -10,7 +10,13 @@
     <include
         layout="@layout/title_back_view">
     </include>
-
+    <com.common.commonview.scrollview.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <com.example.administrator.mifei.view.txt_head_img_item
         android:id="@+id/headChange"
         android:layout_marginTop="@dimen/Android_25dp"
@@ -26,6 +32,7 @@
         android:layout_height="@dimen/Android_44dp"
         hjl:ti_item_txt="修改密码">
     </com.example.administrator.mifei.view.txt_img_item>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,6 +47,6 @@
         android:layout_marginLeft="@dimen/Android_20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-
+    </LinearLayout>
+    </com.common.commonview.scrollview.OverScrollView>
 </LinearLayout>

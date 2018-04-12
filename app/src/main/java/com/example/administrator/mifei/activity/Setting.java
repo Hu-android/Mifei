@@ -8,12 +8,13 @@ import android.widget.Toast;
 
 import com.common.commonbase.BaseBackActivity;
 import com.example.administrator.mifei.R;
+import com.example.administrator.mifei.utils.ClickListener;
 import com.example.administrator.mifei.view.txt_head_img_item;
 import com.example.administrator.mifei.view.txt_img_item;
 
 import butterknife.Bind;
 
-public class Setting extends BaseBackActivity implements View.OnClickListener{
+public class Setting extends BaseBackActivity{
     @Bind(R.id.headChange)
     txt_head_img_item headChange;
     @Bind(R.id.pwdChange)
@@ -42,18 +43,18 @@ public class Setting extends BaseBackActivity implements View.OnClickListener{
 
     @Override
     public void initView(Bundle savedInstanceState) {
-
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.headChange:
-
-                break;
-            case R.id.pwdChange:
+        headChange.setCustomOnClickListener(new ClickListener() {
+            @Override
+            public void Click(View v) {
+                Toast.makeText(mContext,"更改头像",Toast.LENGTH_SHORT).show();
+            }
+        });
+        pwdChange.setCustomOnClickListener(new ClickListener() {
+            @Override
+            public void Click(View v) {
                 PwdChange.toActivity(mContext);
-                break;
-        }
+            }
+        });
     }
+
 }

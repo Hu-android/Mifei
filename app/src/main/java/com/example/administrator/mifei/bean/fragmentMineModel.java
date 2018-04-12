@@ -6,7 +6,7 @@ import com.example.administrator.mifei.http.bean.BaseHttpModel;
  * Created by Administrator on 2018/4/10 0010.
  */
 
-public class fragment_mine_model {
+public class fragmentMineModel {
 
     public static class mineHeaderView{
         private int userHeaders;

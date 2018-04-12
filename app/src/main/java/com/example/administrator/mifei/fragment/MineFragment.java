@@ -1,7 +1,6 @@
 package com.example.administrator.mifei.fragment;
 
 
-import android.nfc.Tag;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,12 +14,13 @@ import com.bumptech.glide.RequestManager;
 import com.common.commonbase.BaseFragment;
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.activity.LowerOrder;
+import com.example.administrator.mifei.activity.MineComprehensive;
 import com.example.administrator.mifei.activity.PickOrder;
 import com.example.administrator.mifei.activity.PurchaseOrder;
 import com.example.administrator.mifei.activity.Setting;
 import com.example.administrator.mifei.activity.ZhigouOrder;
-import com.example.administrator.mifei.adapter.fragment_mine_adapter;
-import com.example.administrator.mifei.bean.fragment_mine_model;
+import com.example.administrator.mifei.adapter.fragmentMineAdapter;
+import com.example.administrator.mifei.bean.fragmentMineModel;
 import com.example.administrator.mifei.utils.GlideCircleTransform;
 import com.example.administrator.mifei.utils.StatusBarSetting;
 
@@ -34,8 +34,8 @@ public class MineFragment extends BaseFragment implements View.OnClickListener,A
     private RequestManager glideRequest;
     @Bind(R.id.list_function)
     ListView list_function;
-    private List<fragment_mine_model.mineFunctionView> functionViews = new ArrayList<>();
-    fragment_mine_adapter adapter;
+    private List<fragmentMineModel.mineFunctionView> functionViews = new ArrayList<>();
+    fragmentMineAdapter adapter;
 
     @Override
     protected int getLayoutResource() {
@@ -71,32 +71,32 @@ public class MineFragment extends BaseFragment implements View.OnClickListener,A
 
         functionViews = new ArrayList<>();
 
-        fragment_mine_model.mineFunctionView fun10 = new fragment_mine_model.mineFunctionView(1);
+        fragmentMineModel.mineFunctionView fun10 = new fragmentMineModel.mineFunctionView(1);
         functionViews.add(fun10);
-        fragment_mine_model.mineFunctionView fun9 = new fragment_mine_model.mineFunctionView(2);
+        fragmentMineModel.mineFunctionView fun9 = new fragmentMineModel.mineFunctionView(2);
         functionViews.add(fun9);
-        fragment_mine_model.mineFunctionView fun11 = new fragment_mine_model.mineFunctionView(1);
+        fragmentMineModel.mineFunctionView fun11 = new fragmentMineModel.mineFunctionView(1);
         functionViews.add(fun11);
-        fragment_mine_model.mineFunctionView fun0 = new fragment_mine_model.mineFunctionView(0,R.drawable.wallet,"我的钱包");
+        fragmentMineModel.mineFunctionView fun0 = new fragmentMineModel.mineFunctionView(0,R.drawable.wallet,"我的钱包");
         functionViews.add(fun0);
-        fragment_mine_model.mineFunctionView fun1 = new fragment_mine_model.mineFunctionView(0,R.drawable.sale,"我的销售");
+        fragmentMineModel.mineFunctionView fun1 = new fragmentMineModel.mineFunctionView(0,R.drawable.sale,"我的销售");
         functionViews.add(fun1);
-        fragment_mine_model.mineFunctionView fun2 = new fragment_mine_model.mineFunctionView(0,R.drawable.channel,"我的渠道");
+        fragmentMineModel.mineFunctionView fun2 = new fragmentMineModel.mineFunctionView(0,R.drawable.channel,"我的渠道");
         functionViews.add(fun2);
-        fragment_mine_model.mineFunctionView fun3 = new fragment_mine_model.mineFunctionView(1);
+        fragmentMineModel.mineFunctionView fun3 = new fragmentMineModel.mineFunctionView(1);
         functionViews.add(fun3);
-        fragment_mine_model.mineFunctionView fun4 = new fragment_mine_model.mineFunctionView(0,R.drawable.levelup,"我要升级");
+        fragmentMineModel.mineFunctionView fun4 = new fragmentMineModel.mineFunctionView(0,R.drawable.levelup,"我要升级");
         functionViews.add(fun4);
-        fragment_mine_model.mineFunctionView fun5 = new fragment_mine_model.mineFunctionView(0,R.drawable.authorization,"我要授权");
+        fragmentMineModel.mineFunctionView fun5 = new fragmentMineModel.mineFunctionView(0,R.drawable.authorization,"我要授权");
         functionViews.add(fun5);
-        fragment_mine_model.mineFunctionView fun6 = new fragment_mine_model.mineFunctionView(0,R.drawable.promote,"我要推广");
+        fragmentMineModel.mineFunctionView fun6 = new fragmentMineModel.mineFunctionView(0,R.drawable.promote,"我要推广");
         functionViews.add(fun6);
-        fragment_mine_model.mineFunctionView fun7 = new fragment_mine_model.mineFunctionView(1);
+        fragmentMineModel.mineFunctionView fun7 = new fragmentMineModel.mineFunctionView(1);
         functionViews.add(fun7);
-        fragment_mine_model.mineFunctionView fun8 = new fragment_mine_model.mineFunctionView(0,R.drawable.synthesis,"综合业务");
+        fragmentMineModel.mineFunctionView fun8 = new fragmentMineModel.mineFunctionView(0,R.drawable.synthesis,"综合业务");
         functionViews.add(fun8);
 
-        adapter = new fragment_mine_adapter(mContext);
+        adapter = new fragmentMineAdapter(mContext);
         list_function.addHeaderView(view);
         adapter.addData(functionViews);
         list_function.setAdapter(adapter);
@@ -162,6 +162,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener,A
                 Toast.makeText(mContext,"我要推广",Toast.LENGTH_SHORT).show();
                 break;
             case 12:
+                MineComprehensive.toActivity(mContext);
                 Toast.makeText(mContext,"综合业务",Toast.LENGTH_SHORT).show();
                 break;
         }

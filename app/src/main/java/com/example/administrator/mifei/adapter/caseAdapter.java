@@ -23,12 +23,12 @@ import java.util.List;
 
 public class caseAdapter extends BaseAdapter{
 
-    //设置接口
-    private View.OnClickListener onAddNum;  //加商品数量接口
-    private View.OnClickListener onSubNum;  //减商品数量接口
     private Context mContext;
     private LayoutInflater inflater;
     private List<GoodsInfoModel.goodsInfo_Buy> buys = new ArrayList<>();
+    //设置接口
+    private View.OnClickListener onAddNum;  //加商品数量接口
+    private View.OnClickListener onSubNum;  //减商品数量接口
 
     //设置接口方法
     public void setOnAddNum(View.OnClickListener onAddNum){
