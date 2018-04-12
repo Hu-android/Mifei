@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.common.commonbase.BaseBackActivity;
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.utils.ClickListener;
+import com.example.administrator.mifei.utils.SwipeListView;
 import com.example.administrator.mifei.view.txt_img_item;
 
 import butterknife.Bind;
@@ -54,6 +55,7 @@ public class MineComprehensive extends BaseBackActivity{
         btn_problem_update.setCustomOnClickListener(new ClickListener() {
             @Override
             public void Click(View v) {
+                MineProblemUpdate.toActivity(mContext);
                 Toast.makeText(mContext,"问题反馈",Toast.LENGTH_SHORT).show();
             }
         });
@@ -65,5 +67,6 @@ public class MineComprehensive extends BaseBackActivity{
         Intent intent = new Intent(context,MineComprehensive.class);
         context.startActivity(intent);
     }
+
 
 }

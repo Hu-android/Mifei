@@ -15,13 +15,21 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ListView
-            android:id="@+id/list_address"
-            android:divider="@null"
+
+        <com.example.administrator.mifei.utils.SwipeListView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-        </ListView>
+            android:divider="@null"
+            android:layout_weight="1"
+            android:id="@+id/list_address">
+        </com.example.administrator.mifei.utils.SwipeListView>
+        <!--<ListView-->
+            <!--android:id="@+id/list_address"-->
+            <!--android:divider="@null"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1">-->
+        <!--</ListView>-->
 
         <LinearLayout
             android:background="@color/white"

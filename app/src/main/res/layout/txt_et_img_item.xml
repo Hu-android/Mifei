@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_txt_et_item"
-    android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
     android:background="@color/white"
     android:paddingLeft="@dimen/Android_15dp"
-    android:paddingRight="@dimen/Android_15dp"
-    tools:context="com.example.administrator.mifei.view.txt_et_item">
+    android:paddingRight="@dimen/Android_15dp">
 
     <TextView
         android:textSize="15sp"
@@ -30,6 +26,14 @@
         android:hint="输入提示文字"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/enter"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+
     <View
         android:background="#F5F5F5"
         android:layout_width="match_parent"

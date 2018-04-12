@@ -2,8 +2,6 @@ package com.example.administrator.mifei.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,30 +11,33 @@ import android.widget.TextView;
 
 import com.example.administrator.mifei.R;
 
-public class txt_et_item extends FrameLayout {
+/**
+ * TODO: document your custom view class.
+ */
+public class txt_et_img_item extends FrameLayout{
     private View mView;
     private TextView te_item_txt_left;
     private EditText te_item_et_left;
 
-    public txt_et_item(Context context) {
+    public txt_et_img_item(Context context) {
         super(context);
         initView(context);
     }
 
-    public txt_et_item(Context context, AttributeSet attrs) {
+    public txt_et_img_item(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context);
         initData(context, attrs);
     }
 
-    public txt_et_item(Context context, AttributeSet attrs, int defStyleAttr) {
+    public txt_et_img_item(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context);
         initData(context, attrs);
     }
 
     private void initView(Context context){
-        mView = LayoutInflater.from(context).inflate(R.layout.txt_et_item,null);
+        mView = LayoutInflater.from(context).inflate(R.layout.txt_et_img_item,null);
         te_item_txt_left = (TextView) mView.findViewById(R.id.te_item_txt_left);
         te_item_et_left = (EditText) mView.findViewById(R.id.te_item_et_left);
         this.addView(mView);

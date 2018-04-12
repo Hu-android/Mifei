@@ -19,25 +19,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <com.example.administrator.mifei.view.txt_et_item
+    <com.example.administrator.mifei.view.txt_et_img_item
         android:layout_marginTop="@dimen/Android_20dp"
         android:layout_width="match_parent"
         android:layout_height="@dimen/Android_44dp"
         hjl:te_item_txt="原密码"
         hjl:te_item_et="请输入原始密码">
-    </com.example.administrator.mifei.view.txt_et_item>
-    <com.example.administrator.mifei.view.txt_et_item
+    </com.example.administrator.mifei.view.txt_et_img_item>
+    <com.example.administrator.mifei.view.txt_et_img_item
         android:layout_width="match_parent"
         android:layout_height="@dimen/Android_44dp"
         hjl:te_item_txt="新密码"
         hjl:te_item_et="请输入新密码">
-    </com.example.administrator.mifei.view.txt_et_item>
-    <com.example.administrator.mifei.view.txt_et_item
+    </com.example.administrator.mifei.view.txt_et_img_item>
+    <com.example.administrator.mifei.view.txt_et_img_item
         android:layout_width="match_parent"
         android:layout_height="@dimen/Android_44dp"
         hjl:te_item_txt="新密码确认"
         hjl:te_item_et="请输入新密码确认">
-    </com.example.administrator.mifei.view.txt_et_item>
+    </com.example.administrator.mifei.view.txt_et_img_item>
 
     <TextView
         android:layout_width="match_parent"

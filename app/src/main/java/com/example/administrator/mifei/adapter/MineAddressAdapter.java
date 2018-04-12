@@ -11,10 +11,13 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.common.commonutil.CollectionUtils;
 import com.example.administrator.mifei.R;
+import com.example.administrator.mifei.activity.MineAddressUpdate;
 import com.example.administrator.mifei.bean.MineAddressModel;
+import com.example.administrator.mifei.utils.SwipeListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,24 +27,12 @@ import java.util.List;
  * Created by Administrator on 2018/4/12 0012.
  */
 
-public class MineAddressAdapter extends BaseAdapter {
+public class MineAddressAdapter extends BaseAdapter{
     private Context mContext;
     private LayoutInflater inflater;
     private List<MineAddressModel.addressInfo> addressInfos = new ArrayList<>();
     // 记录所有radiobutton 被点击的状态
     public HashMap<String,Boolean> states = new HashMap<String, Boolean>();
-
-    //设置接口
-    private View.OnClickListener onUpdate;
-    private View.OnClickListener onDelete;
-
-    //设置接口方法
-    public void setOnUpdate(View.OnClickListener onUpdate){
-        this.onUpdate = onUpdate;
-    }
-    public void setOnDelete(View.OnClickListener onDelete){
-        this.onDelete = onDelete;
-    }
 
     public MineAddressAdapter(Context context) {
         this.mContext = context;
@@ -89,8 +80,20 @@ public class MineAddressAdapter extends BaseAdapter {
             viewHolderOne.radio_set_default = (RadioButton) v.findViewById(R.id.radio_set_default);
             viewHolderOne.btn_to_address_update = (Button) v.findViewById(R.id.btn_to_address_update);
             viewHolderOne.btn_to_address_delete = (Button) v.findViewById(R.id.btn_to_address_delete);
-            viewHolderOne.btn_to_address_update.setOnClickListener(onUpdate);
-            viewHolderOne.btn_to_address_delete.setOnClickListener(onDelete);
+            viewHolderOne.btn_to_address_update.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MineAddressUpdate.toActivity(mContext);
+                    Toast.makeText(mContext,"修改地址",Toast.LENGTH_SHORT).show();
+                }
+            });
+            viewHolderOne.btn_to_address_delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    addressInfos.remove(position);
+                    notifyDataSetChanged();
+                }
+            });
         }
         viewHolderOne.txt_user_name.setText(addressInfo.getUser_name());
         viewHolderOne.txt_user_tel.setText(addressInfo.getUser_tel());
@@ -136,6 +139,7 @@ public class MineAddressAdapter extends BaseAdapter {
         }
         states.put(String.valueOf(position), true);
     }
+
 
     class ViewHolderOne{
         public TextView txt_user_name,txt_user_tel,txt_user_address,txt_set_default;

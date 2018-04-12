@@ -43,7 +43,10 @@
         <activity android:name=".activity.PwdChange" />
         <activity android:name=".activity.MineComprehensive" />
         <activity android:name=".activity.MineReceiveAddress" />
-        <activity android:name=".view.MineAddressItem"></activity>
+        <activity android:name=".view.MineAddressItem" />
+        <activity android:name=".activity.MineProblemUpdate" />
+        <activity android:name=".activity.MineAddressUpdate" />
+        <activity android:name=".view.txt_et_item"></activity>
     </application>
 
 </manifest>

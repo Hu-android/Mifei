@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:hjl="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_mine_address_update"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.mifei.activity.MineAddressUpdate">
+
+    <include
+        layout="@layout/title_back_view">
+    </include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_10dp" />
+
+    <com.example.administrator.mifei.view.txt_et_img_item
+        android:id="@+id/txt_region"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="所在地区"
+        hjl:te_item_et="请选择收件人所在地区">
+    </com.example.administrator.mifei.view.txt_et_img_item>
+
+    <com.example.administrator.mifei.view.txt_et_item
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="详细地址"
+        hjl:te_item_et="请选择收件人所在地区">
+    </com.example.administrator.mifei.view.txt_et_item>
+
+    <com.example.administrator.mifei.view.txt_et_item
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="收件人"
+        hjl:te_item_et="请输入收件人姓名">
+    </com.example.administrator.mifei.view.txt_et_item>
+
+    <com.example.administrator.mifei.view.txt_et_item
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Android_44dp"
+        hjl:te_item_txt="手机号码"
+        hjl:te_item_et="请输入收件人手机号码">
+    </com.example.administrator.mifei.view.txt_et_item>
+
+
+
+
+</LinearLayout>

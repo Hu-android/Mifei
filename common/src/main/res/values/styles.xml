@@ -16,7 +16,7 @@
     </style>
     <!--标题栏名字样式-->
     <style name="txt_title_style">
-        <item name="android:textColor">@color/toast_title_color</item>
+        <item name="android:textColor">@color/text_color_333333</item>
         <item name="android:textSize">17sp</item>
         <item name="android:layout_gravity">center</item>
     </style>

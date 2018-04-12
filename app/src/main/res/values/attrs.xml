@@ -16,7 +16,7 @@
         <attr name="ti_item_txt" format="string"/>
     </declare-styleable>
     
-    <declare-styleable name="txt_et_item_te">
+    <declare-styleable name="txt_et_img_item_tei">
         <attr name="te_item_txt" format="string"/>
         <attr name="te_item_et" format="string"/>
     </declare-styleable>

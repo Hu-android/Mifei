@@ -11,16 +11,17 @@ import com.common.commonbase.BaseBackActivity;
 import com.example.administrator.mifei.R;
 import com.example.administrator.mifei.adapter.MineAddressAdapter;
 import com.example.administrator.mifei.bean.MineAddressModel;
+import com.example.administrator.mifei.utils.SwipeListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 
-public class MineReceiveAddress extends BaseBackActivity implements View.OnClickListener{
+public class MineReceiveAddress extends BaseBackActivity{
     private MineAddressAdapter adapter;
     @Bind(R.id.list_address)
-    ListView list_address;
+    SwipeListView list_address;
     private List<MineAddressModel.addressInfo> addressInfos = new ArrayList<>();
 
     @Override
@@ -63,8 +64,6 @@ public class MineReceiveAddress extends BaseBackActivity implements View.OnClick
         adapter = new MineAddressAdapter(mContext);
         adapter.addData(addressInfos);
         list_address.setAdapter(adapter);
-        adapter.setOnUpdate(this);
-        adapter.setOnDelete(this);
     }
 
     public static void toActivity(Context context) {
@@ -72,17 +71,5 @@ public class MineReceiveAddress extends BaseBackActivity implements View.OnClick
         context.startActivity(intent);
     }
 
-    @Override
-    public void onClick(View v) {
-        Object tag = v.getTag();
-        switch (v.getId()){
-            case R.id.btn_to_address_update:
-                Toast.makeText(mContext,"修改地址",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.btn_to_address_delete:
 
-                Toast.makeText(mContext,"删除",Toast.LENGTH_SHORT).show();
-                break;
-        }
-    }
 }
