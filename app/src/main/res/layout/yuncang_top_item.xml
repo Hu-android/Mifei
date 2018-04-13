@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hjl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/px_45"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px_45"
+            android:background="@color/white"
+            android:layout_weight="1">
+
+            <com.example.administrator.mifei.view.Yc_Top_group
+                android:id="@+id/yc_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                hjl:img_src="@drawable/buy"
+                hjl:top_title="进货"
+                hjl:bottom_title="副标题待定待定">
+            </com.example.administrator.mifei.view.Yc_Top_group>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="@dimen/px_45"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/px_45"
+            android:background="@color/white"
+            android:layout_weight="1">
+
+            <com.example.administrator.mifei.view.Yc_Top_group
+                android:id="@+id/yc_pick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                hjl:img_src="@drawable/pick"
+                hjl:top_title="提货"
+                hjl:bottom_title="副标题待定待定">
+            </com.example.administrator.mifei.view.Yc_Top_group>
+
+        </LinearLayout>
+
+</LinearLayout>
+    </LinearLayout>

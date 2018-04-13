@@ -38,6 +38,7 @@
     </com.example.administrator.mifei.view.txt_et_item>
 
     <com.example.administrator.mifei.view.txt_et_item
+        android:id="@+id/address_update_tel"
         android:layout_width="match_parent"
         android:layout_height="@dimen/Android_44dp"
         hjl:te_item_txt="手机号码"

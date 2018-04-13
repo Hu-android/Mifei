@@ -18,10 +18,8 @@
         android:layout_weight="1">
     </ListView>
 
-    <include
-        android:id="@+id/totalMoneyGroup"
-        layout="@layout/total_money"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-    </include>
+    <com.example.administrator.mifei.view.Total_Money
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.administrator.mifei.view.Total_Money>
 </LinearLayout>

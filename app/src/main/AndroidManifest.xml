@@ -46,7 +46,8 @@
         <activity android:name=".view.MineAddressItem" />
         <activity android:name=".activity.MineProblemUpdate" />
         <activity android:name=".activity.MineAddressUpdate" />
-        <activity android:name=".view.txt_et_item"></activity>
+        <activity android:name=".view.txt_et_item" />
+        <activity android:name=".activity.Pay"></activity>
     </application>
 
 </manifest>

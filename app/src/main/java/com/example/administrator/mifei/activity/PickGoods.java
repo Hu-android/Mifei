@@ -24,12 +24,11 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
 
     GoodsPickAdapter adapter;
     private List<GoodsInfoModel.goodsInfo_Pick> picks = new ArrayList<GoodsInfoModel.goodsInfo_Pick>();
-    @Bind(R.id.btnPay)
-    Button btnPay;
     @Bind(R.id.listViewPick)
     ListView listViewPick;
+    @Bind(R.id.txtTotalMoney)
+    TextView txtTotalMoney;
     private double totalMoney=0;
-    private TextView txtTotalMoney;
     GoodsInfoModel.goodsInfo_Pick goodsInfo_pick;
 
     @Override
@@ -49,16 +48,7 @@ public class PickGoods extends BaseBackActivity implements View.OnClickListener,
 
     @Override
     public void initView(Bundle savedInstanceState) {
-        btnPay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext,totalMoney+"",Toast.LENGTH_SHORT).show();
-            }
-        });
-        if (totalMoney == 0){
 
-        }
-        txtTotalMoney = (TextView)findViewById(R.id.txtTotalMoney);
         initListData();
     }
 

@@ -3,9 +3,6 @@ package com.example.administrator.mifei.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import com.common.commonbase.BaseBackActivity;
 import com.example.administrator.mifei.R;
@@ -26,7 +23,7 @@ public class MineReceiveAddress extends BaseBackActivity{
 
     @Override
     public int getLayoutId() {
-        return R.layout.activity_mine_receive_adress;
+        return R.layout.activity_mine_receive_address;
     }
 
     @Override

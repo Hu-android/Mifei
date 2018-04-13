@@ -22,9 +22,9 @@ import java.util.List;
 
 public class GoodsAdapter extends BaseAdapter {
 
-    private final int Type_1 = 0;
-    private final int Type_2 = 1;
-    private final int VIEW_TYPE = 2;
+    private final int TYPE_ONE = 0;
+    private final int TYPE_TWO = 1;
+    private final int TYPE_CONUT = 2;
 
     List<GoodsInfoModel.goodsInfo_YCKCTop> mList = new ArrayList<>();
 
@@ -65,12 +65,12 @@ public class GoodsAdapter extends BaseAdapter {
         int type = getItemViewType(position);
         if (convertView == null) {
             switch (type) {
-                case Type_1:
+                case TYPE_ONE:
                     convertView = mInflater.inflate(R.layout.mine_yuncang_item, null);
                     viewHolder1 = new ViewHolder1(convertView);
                     convertView.setTag(viewHolder1);
                     break;
-                case Type_2:
+                case TYPE_TWO:
                     convertView = mInflater.inflate(R.layout.yckc_list_item, null);
                     viewHolder = new ViewHolder(convertView);
                     convertView.setTag(viewHolder);
@@ -78,23 +78,23 @@ public class GoodsAdapter extends BaseAdapter {
             }
         } else {
             switch (type) {
-                case Type_1:
+                case TYPE_ONE:
                     viewHolder1 = (ViewHolder1) convertView.getTag();
                     break;
-                case Type_2:
+                case TYPE_TWO:
                     viewHolder = (ViewHolder) convertView.getTag();
                     break;
             }
         }
             switch (type) {
-                case Type_1:
+                case TYPE_ONE:
                     if (position == 0) {
                         viewHolder1.txt_mine_yuncang.setText("我的云仓");
                     } else if (position == getCount() - 1) {
                         viewHolder1.txt_mine_yuncang.setText("进出明细");
                     }
                     break;
-                case Type_2:
+                case TYPE_TWO:
                     GoodsInfoModel.goodsInfo_YCKCTop goodsInfo_yckcTop = mList.get(position);
                     viewHolder.txtTop.setText(goodsInfo_yckcTop.goodsName);
                     viewHolder.txtMid.setText(String.valueOf(goodsInfo_yckcTop.canPickGoods));
@@ -117,14 +117,14 @@ public class GoodsAdapter extends BaseAdapter {
     @Override
     public int getItemViewType(int position) {
         if (position == 0||position == getCount()){
-            return Type_1;
+            return TYPE_ONE;
         }else{
-            return Type_2;
+            return TYPE_TWO;
         }
     }
 
     public int getViewTypeCount() {
-        return VIEW_TYPE;
+        return TYPE_CONUT;
     }
 
     static class ViewHolder1 {

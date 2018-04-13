@@ -1,7 +1,9 @@
 package com.example.administrator.mifei.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -64,7 +66,7 @@ public class MineAddressAdapter extends BaseAdapter{
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         View v = null;
-        MineAddressModel.addressInfo addressInfo = addressInfos.get(position);
+        final MineAddressModel.addressInfo addressInfo = addressInfos.get(position);
         if (convertView != null){
             v = convertView;
         }else {
@@ -83,7 +85,12 @@ public class MineAddressAdapter extends BaseAdapter{
             viewHolderOne.btn_to_address_update.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    MineAddressUpdate.toActivity(mContext);
+//                    MineAddressUpdate.toActivity(mContext);
+                    Intent intent = new Intent(mContext,MineAddressUpdate.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("tel",addressInfo.getUser_tel());
+                    intent.putExtras(bundle);
+                    mContext.startActivity(intent);
                     Toast.makeText(mContext,"修改地址",Toast.LENGTH_SHORT).show();
                 }
             });

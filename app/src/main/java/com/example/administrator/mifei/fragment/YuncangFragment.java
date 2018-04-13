@@ -1,6 +1,7 @@
 package com.example.administrator.mifei.fragment;
 
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
 
@@ -25,10 +26,10 @@ public class YuncangFragment extends BaseGoodsGroup{
     private List<GoodsInfoModel.goodsInfo_YCKCTop> info = new ArrayList<GoodsInfoModel.goodsInfo_YCKCTop>();
     GoodsAdapter adapter;
 
-    @Bind(R.id.yc_buy)
-    Yc_Top_group yc_buy;
-    @Bind(R.id.yc_pick)
-    Yc_Top_group yc_pick;
+//    @Bind(R.id.yc_buy)
+//    Yc_Top_group yc_buy;
+//    @Bind(R.id.yc_pick)
+//    Yc_Top_group yc_pick;
     @Bind(R.id.listViewYc)
     ListView listView;
 
@@ -51,19 +52,19 @@ public class YuncangFragment extends BaseGoodsGroup{
     @Override
     public void initView() {
         initList();
-        yc_buy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PickGoods.toActivity(mContext);
-            }
-        });
-
-        yc_pick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BuyGoods.toActivity(mContext);
-            }
-        });
+//        yc_buy.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                PickGoods.toActivity(mContext);
+//            }
+//        });
+//
+//        yc_pick.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                BuyGoods.toActivity(mContext);
+//            }
+//        });
     }
 
     public void initList(){
@@ -85,7 +86,22 @@ public class YuncangFragment extends BaseGoodsGroup{
         info.add(info6);
         GoodsInfoModel.goodsInfo_YCKCTop info7 = new GoodsInfoModel.goodsInfo_YCKCTop("米菲纸尿裤7",679,1890,R.drawable.default_place_holder);
         info.add(info7);
-
+        View view = LayoutInflater.from(mContext).inflate(R.layout.yuncang_top_item,null);
+        Yc_Top_group yc_buy = (Yc_Top_group)view.findViewById(R.id.yc_buy);
+        Yc_Top_group yc_pick = (Yc_Top_group)view.findViewById(R.id.yc_pick);
+        yc_buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PickGoods.toActivity(mContext);
+            }
+        });
+        yc_pick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BuyGoods.toActivity(mContext);
+            }
+        });
+        listView.addHeaderView(view);
         adapter = new GoodsAdapter(mContext);
         adapter.addData(info);
         listView.setAdapter(adapter);

@@ -50,4 +50,8 @@ public class txt_et_item extends FrameLayout {
         te_item_et_left.setHint(et_item);
         ta1.recycle();  //注意回收
     }
+
+    public void setTel(String tel){
+        te_item_et_left.setText(tel);
+    }
 }

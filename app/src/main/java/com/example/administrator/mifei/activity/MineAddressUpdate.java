@@ -7,8 +7,13 @@ import android.os.Bundle;
 
 import com.common.commonbase.BaseBackActivity;
 import com.example.administrator.mifei.R;
+import com.example.administrator.mifei.view.txt_et_item;
+
+import butterknife.Bind;
 
 public class MineAddressUpdate extends BaseBackActivity {
+    @Bind(R.id.address_update_tel)
+    txt_et_item address_update_tel;
 
     @Override
     public int getLayoutId() {
@@ -27,7 +32,9 @@ public class MineAddressUpdate extends BaseBackActivity {
 
     @Override
     public void initView(Bundle savedInstanceState) {
-
+        Bundle bundle = getIntent().getExtras();
+        String tel = bundle.getString("tel");
+        address_update_tel.setTel(tel);
     }
 
     public static void toActivity(Context context) {
