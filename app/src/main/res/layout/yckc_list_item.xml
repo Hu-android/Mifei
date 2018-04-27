@@ -8,16 +8,16 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_330"
-        android:paddingRight="@dimen/px_45"
+        android:layout_height="110.5dp"
+        android:paddingTop="10.5dp"
+        android:paddingLeft="@dimen/Android_15dp"
+        android:paddingRight="@dimen/Android_15dp"
         android:gravity="center_vertical">
 
         <ImageView
-
-            android:layout_width="@dimen/px_270"
-            android:layout_height="@dimen/px_270"
+            android:layout_width="@dimen/Android_90dp"
+            android:layout_height="@dimen/Android_90dp"
             android:id="@+id/img_yckc_list_item"
-            android:layout_marginLeft="@dimen/px_45"
             android:src="@drawable/default_place_holder"/>
 
 
@@ -31,5 +31,13 @@
             android:layout_marginLeft="@dimen/px_24"
             android:layout_toRightOf="@+id/img_yckc_list_item">
         </include>
+
+        <View
+            android:background="#F5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"/>
+
+
     </RelativeLayout>
 </RelativeLayout>
