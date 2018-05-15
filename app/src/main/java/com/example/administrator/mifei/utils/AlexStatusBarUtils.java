@@ -1,4 +1,4 @@
-package com.statusbar_alexleo.alexstatusbarutilslib;
+package com.example.administrator.mifei.utils;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -16,6 +16,8 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.example.administrator.mifei.R;
 
 /**
  * Created by Alex on 2017/3/2.
