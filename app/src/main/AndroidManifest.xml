@@ -21,15 +21,21 @@
 
         <!-- 登陆页面 -->
         <activity
-            android:name=".activity.Login"
+            android:name=".activity.welcom"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.Guide"
+            android:theme="@style/FullScreen"/>
+        <activity
+            android:launchMode="singleTop"
+            android:name=".activity.Login"/>
         <activity android:name=".activity.Pwd_Reset" />
         <activity android:name=".activity.Mine" />
         <activity android:name=".main.MainActivity" />
@@ -38,19 +44,16 @@
         <activity android:name=".activity.buyPay" />
         <activity android:name=".activity.Setting" />
         <activity android:name=".activity.PurchaseOrder" />
-        <activity android:name=".activity.orderAll" />
         <activity android:name=".activity.PickOrder" />
         <activity android:name=".activity.LowerOrder" />
         <activity android:name=".activity.ZhigouOrder" />
         <activity android:name=".activity.PwdChange" />
         <activity android:name=".activity.MineComprehensive" />
         <activity android:name=".activity.MineReceiveAddress" />
-        <activity android:name=".view.MineAddressItem" />
         <activity android:name=".activity.MineProblemUpdate" />
         <activity android:name=".activity.MineAddressUpdate" />
-        <activity android:name=".view.txt_et_item" />
         <activity android:name=".activity.Pay" />
-        <activity android:name=".view.ClipImageActivity"></activity>
+        <activity android:name=".view.ClipImageActivity" />
     </application>
 
 </manifest>
