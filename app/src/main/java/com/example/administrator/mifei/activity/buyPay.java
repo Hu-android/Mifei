@@ -49,7 +49,6 @@ public class buyPay extends BaseBackActivity {
         initHeaderView();
         txt_title.setText(tel);
     }
-
     private void initHeaderView(){
         View view = LayoutInflater.from(mContext).inflate(R.layout.yc_title_list_item, null);
         txt_title = (TextView) view.findViewById(R.id.yc_title_list_item);
