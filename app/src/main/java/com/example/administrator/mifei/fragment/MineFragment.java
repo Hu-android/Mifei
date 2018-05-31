@@ -105,9 +105,6 @@ public class MineFragment extends BaseFragment implements View.OnClickListener,A
         adapter.setOnPickorder(this);
         adapter.setOnZhigouorder(this);
         list_function.setOnItemClickListener(this);
-        for (int i = 0;i < list_function.getCount();i++){
-            Log.d("iiiiiiiiiiii",i+"");
-        }
     }
 
     @Override

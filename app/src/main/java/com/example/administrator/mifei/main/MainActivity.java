@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.View;
 
 import com.common.commonbase.BaseMainActivity;
 import com.common.commonutil.LogUtils;
@@ -113,6 +114,7 @@ public class MainActivity extends BaseMainActivity {
             switch (position) {
                 case 0://首页
                     fragment = new YuncangFragment();
+                    getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
                     break;
                 case 1://云仓
                     fragment = new ZhigouFragment();

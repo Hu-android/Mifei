@@ -83,6 +83,7 @@
                 <EditText
                     style="@style/Edittext_theme"
                     android:hint="密码"
+                    android:inputType="numberPassword"
                     android:id="@+id/txt_hint_pwd"
                     android:layout_toRightOf="@id/img_icon_pwd"
                     android:layout_alignTop="@id/img_icon_pwd" />
