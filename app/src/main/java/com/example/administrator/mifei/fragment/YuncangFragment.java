@@ -10,6 +10,7 @@ import com.example.administrator.mifei.activity.BuyGoods;
 import com.example.administrator.mifei.activity.PickGoods;
 import com.example.administrator.mifei.adapter.GoodsAdapter;
 import com.example.administrator.mifei.bean.GoodsInfoModel;
+import com.example.administrator.mifei.utils.AlexStatusBarUtils;
 import com.example.administrator.mifei.view.BaseGoodsGroup;
 import com.example.administrator.mifei.view.Yc_Top_group;
 

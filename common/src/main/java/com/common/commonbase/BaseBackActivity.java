@@ -71,7 +71,7 @@ public abstract class BaseBackActivity extends AppCompatActivity {
         AppManager.getAppManager().addActivity(this);
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         // 默认着色状态栏
-        SetStatusBarColor();
+        SetTranslanteBar();
 
     }
 

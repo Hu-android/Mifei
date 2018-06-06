@@ -14,6 +14,7 @@ import com.example.administrator.mifei.http.ApiManager;
 import com.example.administrator.mifei.http.BaseCallBack;
 import com.example.administrator.mifei.http.OkHttpTools;
 import com.example.administrator.mifei.main.MainActivity;
+import com.example.administrator.mifei.utils.AlexStatusBarUtils;
 import com.example.administrator.mifei.utils.L;
 import com.google.gson.Gson;
 
@@ -57,8 +58,7 @@ public class Login extends BaseBackActivity{
 
     @Override
     public void initView(Bundle savedInstanceState) {
-
-
+        AlexStatusBarUtils.setStatusBarLightMode(this);
     }
 
     @OnClick({R.id.pwd_forget,R.id.btn_login})

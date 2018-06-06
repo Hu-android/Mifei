@@ -32,7 +32,7 @@ dependencies {
     //OkHttp
     compile 'com.zhy:okhttputils:2.6.2'
     compile 'com.android.support:support-v4:25.3.1'
-    //iconbutton
+    //iconButton
     compile 'com.githang:com-phillipcalvin-iconbutton:2.0.2'
     testCompile 'junit:junit:4.12'
 }

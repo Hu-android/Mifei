@@ -98,7 +98,7 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 着色状态栏（4.4以上系统有效）
      */
     protected void SetStatusBarColor(int color) {
-        StatusBarCompat.setStatusBarColor(this, ContextCompat.getColor(this, R.color.colorPrimaryDark));
+        StatusBarCompat.setStatusBarColor(this, color);
     }
 
     /**
